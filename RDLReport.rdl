@@ -11,61 +11,6 @@
       <rd:DataSourceID>b697e87f-cd1a-42c3-928d-7606a07b934b</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Date_Created">
-          <DataField>Date_Created</DataField>
-        </Field>
-        <Field Name="Sell_to_Customer_No_">
-          <DataField>Sell_to_Customer_No_</DataField>
-        </Field>
-        <Field Name="Sell_to_Customer_Name">
-          <DataField>Sell_to_Customer_Name</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="Total_Amount">
-          <DataField>Total_Amount</DataField>
-        </Field>
-        <Field Name="Total_AmountFormat">
-          <DataField>Total_AmountFormat</DataField>
-        </Field>
-        <Field Name="Item_No_">
-          <DataField>Item_No_</DataField>
-        </Field>
-        <Field Name="Item_Type">
-          <DataField>Item_Type</DataField>
-        </Field>
-        <Field Name="Description">
-          <DataField>Description</DataField>
-        </Field>
-        <Field Name="Quantity">
-          <DataField>Quantity</DataField>
-        </Field>
-        <Field Name="QuantityFormat">
-          <DataField>QuantityFormat</DataField>
-        </Field>
-        <Field Name="Unit_Price">
-          <DataField>Unit_Price</DataField>
-        </Field>
-        <Field Name="Unit_PriceFormat">
-          <DataField>Unit_PriceFormat</DataField>
-        </Field>
-        <Field Name="Amount">
-          <DataField>Amount</DataField>
-        </Field>
-        <Field Name="AmountFormat">
-          <DataField>AmountFormat</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -80,10 +25,10 @@
                   <Width>1.85417in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.70833in</Width>
+                  <Width>2.19791in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>2.0625in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -94,6 +39,7 @@
                       <CellContents>
                         <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
+                          <HideDuplicates>DataSet_Result</HideDuplicates>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -218,13 +164,13 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Date_Created">
-                          <CanGrow>true</CanGrow>
+                          <HideDuplicates>DataSet_Result</HideDuplicates>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>[Date_Created]</Value>
+                                  <Value>=First(Fields!Date_Created.Value, "DataSet_Result")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -248,13 +194,13 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="USERID1">
-                          <CanGrow>true</CanGrow>
+                          <HideDuplicates>DataSet_Result</HideDuplicates>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!USERID.Value</Value>
+                                  <Value>=First(Fields!USERID.Value, "DataSet_Result")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -278,13 +224,13 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Sell_to_Customer_No_">
-                          <CanGrow>true</CanGrow>
+                          <HideDuplicates>DataSet_Result</HideDuplicates>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Sell_to_Customer_No_.Value</Value>
+                                  <Value>=First(Fields!Sell_to_Customer_No_.Value, "DataSet_Result")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -308,13 +254,13 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Sell_to_Customer_Name">
-                          <CanGrow>true</CanGrow>
+                          <HideDuplicates>DataSet_Result</HideDuplicates>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Sell_to_Customer_Name.Value</Value>
+                                  <Value>=First(Fields!Sell_to_Customer_Name.Value, "DataSet_Result")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -358,10 +304,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.32514in</Top>
+            <Top>0.70708in</Top>
             <Left>0.25917in</Left>
             <Height>0.5in</Height>
-            <Width>6.0625in</Width>
+            <Width>7.61458in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -761,6 +707,191 @@
                     </TablixCell>
                   </TablixCells>
                 </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox118">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Amount</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox118</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox119">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Total_Amount.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox119</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox125">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox125</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox121">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox121</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox122">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox122</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox123">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox123</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
@@ -781,121 +912,17 @@
                 <TablixMember>
                   <Group Name="Details1" />
                 </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.89458in</Top>
+            <Top>1.24875in</Top>
             <Left>0.25917in</Left>
-            <Height>0.5in</Height>
+            <Height>0.75in</Height>
             <Width>8.41667in</Width>
             <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Tablix>
-          <Tablix Name="Tablix4">
-            <TablixBody>
-              <TablixColumns>
-                <TablixColumn>
-                  <Width>1.5in</Width>
-                </TablixColumn>
-              </TablixColumns>
-              <TablixRows>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox40">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Total Amount</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox40</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Total_Amount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Total_Amount.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Total_Amount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-              </TablixRows>
-            </TablixBody>
-            <TablixColumnHierarchy>
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
-            </TablixColumnHierarchy>
-            <TablixRowHierarchy>
-              <TablixMembers>
-                <TablixMember>
-                  <KeepWithGroup>After</KeepWithGroup>
-                </TablixMember>
-                <TablixMember>
-                  <Group Name="Details2" />
-                </TablixMember>
-              </TablixMembers>
-            </TablixRowHierarchy>
-            <DataSetName>DataSet_Result</DataSetName>
-            <Top>1.46403in</Top>
-            <Left>0.25917in</Left>
-            <Height>0.5in</Height>
-            <Width>1.5in</Width>
-            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -912,12 +939,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -957,4 +978,59 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Date_Created">
+          <DataField>Date_Created</DataField>
+        </Field>
+        <Field Name="Sell_to_Customer_No_">
+          <DataField>Sell_to_Customer_No_</DataField>
+        </Field>
+        <Field Name="Sell_to_Customer_Name">
+          <DataField>Sell_to_Customer_Name</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Total_Amount">
+          <DataField>Total_Amount</DataField>
+        </Field>
+        <Field Name="Total_AmountFormat">
+          <DataField>Total_AmountFormat</DataField>
+        </Field>
+        <Field Name="Item_No_">
+          <DataField>Item_No_</DataField>
+        </Field>
+        <Field Name="Item_Type">
+          <DataField>Item_Type</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price">
+          <DataField>Unit_Price</DataField>
+        </Field>
+        <Field Name="Unit_PriceFormat">
+          <DataField>Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

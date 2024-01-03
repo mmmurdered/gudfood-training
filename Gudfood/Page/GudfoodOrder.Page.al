@@ -47,6 +47,7 @@ page 50104 GudfoodOrder
             }
             part(SalesLine; GudfoodOrderSubpage)
             {
+                SubPageLink = "Order No." = field("No.");
                 UpdatePropagation = Both;
                 ApplicationArea = all;
             }

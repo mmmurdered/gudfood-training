@@ -31,31 +31,33 @@ page 50102 GudfoodItemPicture
                 Image = Import;
                 ToolTip = 'Import a picture file.';
                 Visible = true;
+
+                trigger OnAction()
+                begin
+                    ImportFromDevice();
+                end;
             }
         }
     }
 
-    // procedure ImportFromDevice()
-    // var
-    //     FileManagement: Codeunit "File Management";
-    //     FileName: Text;
-    //     ClientFileName: Text;
-    //     InStr: InStream;
-    // begin
-    //     Rec.Find();
-    //     Rec.TestField(Code);
-    //     ClientFileName := '';
-    //     UploadIntoStream('Select your picture', '', '', ClientFileName, InStr);
-    //     if ClientFileName <> '' then
-    //         FileName := FileManagement.GetFileName(ClientFileName);
-    //     //FileName := FileManagement.UploadFile(SelectPictureTxt, ClientFileName);
-    //     if FileName = '' then
-    //         Error('');
-
-    //     Clear(Rec.Picture);
-    //     Rec.Picture.ImportStream(InStr, FileName);
-    //     //Picture.ImportFile(FileName, ClientFileName);
-    //     Rec.Modify(true);
-    // end;
+    procedure ImportFromDevice()
+    var
+        FileManagement: Codeunit "File Management";
+        FileName: Text;
+        ClientFileName: Text;
+        InStr: InStream;
+    begin
+        Rec.Find();
+        Rec.TestField(Code);
+        ClientFileName := '';
+        UploadIntoStream('Select your picture', '', '', ClientFileName, InStr);
+        if ClientFileName <> '' then
+            FileName := FileManagement.GetFileName(ClientFileName);
+        if FileName = '' then
+            Error('');
+        Clear(Rec.Picture);
+        Rec.Picture.ImportStream(InStr, FileName);
+        Rec.Modify(true);
+    end;
 
 }

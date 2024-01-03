@@ -30,7 +30,7 @@ table 50101 GudfoodOrderHeader
         }
         field(11; "Sell-to Customer Name"; Text[100])
         {
-            CaptionML = UKR = 'Продано клієнту за Ім"енем', ENU = 'Sell-to Customer Name';
+            CaptionML = UKR = 'Продано клієнту за Іменем', ENU = 'Sell-to Customer Name';
             DataClassification = ToBeClassified;
         }
         field(20; "Order Date"; Date)

@@ -8,7 +8,17 @@ table 50102 GudfoodOrderLine
         field(1; "Order No."; Code[20])
         {
             CaptionML = UKR = 'Номер замовлення', ENU = 'Order No.';
-            TableRelation = GudfoodOrderHeader."No." where("No." = field("Order No."));
+            TableRelation = GudfoodOrderHeader;
+            trigger OnValidate()
+            var
+                GudfoodOrderHeader: Record GudfoodOrderHeader;
+            begin
+                if "Order No." <> '' then begin
+                    GudfoodOrderHeader.Get("Order No.");
+                    "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
+                    "Date Created" := GudfoodOrderHeader."Date Created";
+                end;
+            end;
         }
         field(2; "Line No."; Integer)
         {

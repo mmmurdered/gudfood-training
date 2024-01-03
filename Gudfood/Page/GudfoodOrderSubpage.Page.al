@@ -13,6 +13,7 @@ page 50103 GudfoodOrderSubpage
             {
                 field("Order No."; Rec."Order No.")
                 {
+                    Visible = false;
                     ApplicationArea = All;
                 }
                 field("Line No."; Rec."Line No.")

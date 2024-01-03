@@ -59,7 +59,8 @@ page 50101 GudfoodItemCard
         {
             part(Picture; GudfoodItemPicture)
             {
-                //SubPageLink = Code = field(Code);
+                ApplicationArea = All;
+                SubPageLink = Code = field(Code);
             }
         }
     }
