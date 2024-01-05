@@ -81,6 +81,10 @@ page 50104 GudfoodOrder
                     GudfoodOrderReport: Report GudfoodOrderReport;
                     GudfoodOrderHeader: Record GudfoodOrderHeader;
                 begin
+                    //TODO test this shit
+                    GudfoodOrderHeader.SetCurrentKey("No.");
+                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
+                    GudfoodOrderReport.SetTableView(GudfoodOrderHeader);
                     GudfoodOrderReport.Run();
                 end;
             }

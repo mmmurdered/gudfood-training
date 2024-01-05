@@ -9,16 +9,6 @@ table 50102 GudfoodOrderLine
         {
             CaptionML = UKR = 'Номер замовлення', ENU = 'Order No.';
             TableRelation = GudfoodOrderHeader;
-            trigger OnValidate()
-            var
-                GudfoodOrderHeader: Record GudfoodOrderHeader;
-            begin
-                if "Order No." <> '' then begin
-                    GudfoodOrderHeader.Get("Order No.");
-                    "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
-                    "Date Created" := GudfoodOrderHeader."Date Created";
-                end;
-            end;
         }
         field(2; "Line No."; Integer)
         {
@@ -26,7 +16,6 @@ table 50102 GudfoodOrderLine
             Editable = false;
             DataClassification = ToBeClassified;
             InitValue = 10000;
-            AutoIncrement = true;
         }
         field(10; "Sell- to Customer No."; Code[20])
         {
@@ -53,7 +42,7 @@ table 50102 GudfoodOrderLine
                     Description := GudfoodItem.Description;
                     "Unit Price" := GudfoodItem."Unit Price";
                     "Item Type" := GudfoodItem.Type;
-
+                    Amount := Quantity * "Unit Price";
                     if GudfoodItem."Shelf Life" < Today then
                         Message(ShelfDateExpired);
                 end;
@@ -106,17 +95,15 @@ table 50102 GudfoodOrderLine
         GudfoodItem: Record GudfoodItem;
         GudfoodOrderHeader: Record GudfoodOrderHeader;
         ShelfDateExpired: Label 'Shelf date is expired, please choose another item';
+        GudfoodOrderLineAutoIncrement: Codeunit GudfoodOrderLineAutoincrement;
 
     trigger OnInsert();
     begin
-        Rec."Line No." := xRec."Line No." + 10000;
-        // if "Order No." = '' then begin
-        //     Rec."Order No." := xRec."Order No.";
-        //     exit;
-        // end;
-        // if GudfoodOrderHeader.Get("Order No.") then begin
-        //     "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
-        //     "Date Created" := GudfoodOrderHeader."Date Created";
-        // end
+        GudfoodOrderLineAutoIncrement.GetNextLineNo("Line No.", Rec."Order No.");
+        //TODO GET LAST 
+        //Rec."Line No." := xRec."Line No." + 10000;
+        GudfoodOrderHeader.Get("Order No.");
+        "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
+        "Date Created" := GudfoodOrderHeader."Date Created";
     end;
 }

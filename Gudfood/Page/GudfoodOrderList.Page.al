@@ -5,6 +5,7 @@ page 50107 GudfoodOrderList
     UsageCategory = Lists;
     SourceTable = GudfoodOrderHeader;
     CardPageId = GudfoodOrder;
+    ModifyAllowed = false;
 
     layout
     {
@@ -43,4 +44,12 @@ page 50107 GudfoodOrderList
             }
         }
     }
+    trigger OnDeleteRecord(): Boolean
+    var
+        GudfoodOrderLine: Record GudfoodOrderLine;
+    begin
+        GudfoodOrderLine.SetFilter("Order No.", '=%1', Rec."No.");
+        GudfoodOrderLine.FindSet(true);
+        GudfoodOrderLine.DeleteAll(true);
+    end;
 }

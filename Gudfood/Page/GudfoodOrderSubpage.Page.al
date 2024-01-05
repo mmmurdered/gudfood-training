@@ -22,10 +22,12 @@ page 50103 GudfoodOrderSubpage
                 }
                 field("Sell-to Customer No."; Rec."Sell- to Customer No.")
                 {
+                    Visible = false;
                     ApplicationArea = All;
                 }
                 field("Date Created"; Rec."Date Created")
                 {
+                    Visible = false;
                     ApplicationArea = All;
                 }
                 field("Item No."; Rec."Item No.")

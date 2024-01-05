@@ -1,6 +1,6 @@
 page 50101 GudfoodItemCard
 {
-    Caption = 'Gudfood Item Card';
+    CaptionML = UKR = 'Гудфуд картка товару', ENU = 'Gudfood Item Card';
     PageType = Card;
     SourceTable = GudfoodItem;
 
@@ -76,17 +76,4 @@ page 50101 GudfoodItemCard
             }
         }
     }
-
-    // trigger OnAfterGetCurrRecord()
-    // var
-    //     docSeries: Code[20];
-    //     docNo: Code[20];
-    //     NoSeriesMgt: Codeunit NoSeriesManagement;
-    // begin
-    //     if Rec.Code = '' then begin
-    //         docSeries := 'FUD';
-    //         docNo := NoSeriesMgt.GetNextNo(docSeries, WorkDate(), true);
-    //         Rec.Code := docNo;
-    //     end;
-    // end;
 }

@@ -2,11 +2,11 @@ report 50100 GudfoodOrderReport
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    DefaultRenderingLayout = WordLayout;
+    DefaultRenderingLayout = RDLCLayout;
 
     dataset
     {
-        dataitem("Order Header"; GudfoodOrderHeader)
+        dataitem(GudfoodOrderHeader; GudfoodOrderHeader)
         {
             column(Date_Created; "Date Created")
             {
@@ -28,8 +28,9 @@ report 50100 GudfoodOrderReport
             {
 
             }
-            dataitem("Order Line"; GudfoodOrderLine)
+            dataitem(GudfoodOrderLine; GudfoodOrderLine)
             {
+                DataItemLink = "Order No." = field("No.");
                 column(Item_No_; "Item No.")
                 {
 

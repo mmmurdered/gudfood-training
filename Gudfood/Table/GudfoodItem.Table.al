@@ -10,15 +10,6 @@ table 50100 GudfoodItem
         {
             CaptionML = UKR = 'Код', ENU = 'Code';
             DataClassification = ToBeClassified;
-
-            // trigger OnValidate()
-            // var
-            //     NoSeriesMgt: Codeunit NoSeriesManagement;
-            // begin
-            //     if Code <> xRec.Code then begin
-            //         Code := NoSeriesMgt.GetNextNo('FUD', WorkDate(), true);
-            //     end;
-            // end;
         }
 
         field(10; Description; Text[100])
