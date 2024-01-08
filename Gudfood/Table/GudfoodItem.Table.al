@@ -1,6 +1,6 @@
 table 50100 GudfoodItem
 {
-    CaptionML = UKR = 'Gudfood товар', ENU = 'Goodfud Item';
+    CaptionML = UKR = 'Гудфуд товар', ENU = 'Goodfud Item';
     TableType = Normal;
     DataClassification = ToBeClassified;
 
@@ -76,9 +76,9 @@ table 50100 GudfoodItem
 
     trigger OnInsert()
     begin
-        if Code = '' then begin
+        if Rec.Code = '' then begin
             SalesReceivablesSetup.GET;
-            Code := NoSeriesMgt.GetNextNo('FUD', WorkDate(), true);
+            Rec.Code := NoSeriesMgt.GetNextNo('FUD', WorkDate(), true);
         end;
     end;
 }

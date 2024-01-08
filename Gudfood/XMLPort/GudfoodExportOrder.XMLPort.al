@@ -2,84 +2,87 @@ xmlport 50100 GudfoodOrderExport
 {
     Format = Xml;
     Caption = 'Export Order to XML';
+    Direction = Export;
 
     schema
     {
         textelement(OrderOrderHeader)
         {
-            tableelement(OrderHeader; GudfoodOrderHeader)
+            tableelement(GudfoodOrderHeader; GudfoodOrderHeader)
             {
-                fieldelement(No; OrderHeader."No.")
+                fieldelement(No; GudfoodOrderHeader."No.")
                 {
 
                 }
-                fieldelement(SellToCustomerNo; OrderHeader."Sell-to Customer No.")
+                fieldelement(SellToCustomerNo; GudfoodOrderHeader."Sell-to Customer No.")
                 {
 
                 }
-                fieldelement(SellToCustomerName; OrderHeader."Sell-to Customer Name")
+                fieldelement(SellToCustomerName; GudfoodOrderHeader."Sell-to Customer Name")
                 {
 
                 }
-                fieldelement(OrderDate; OrderHeader."Order Date")
+                fieldelement(OrderDate; GudfoodOrderHeader."Order Date")
                 {
 
                 }
-                fieldelement(PostingNo; OrderHeader."Posting No.")
+                fieldelement(PostingNo; GudfoodOrderHeader."Posting No.")
                 {
 
                 }
-                fieldelement(DateCreated; OrderHeader."Date Created")
+                fieldelement(DateCreated; GudfoodOrderHeader."Date Created")
                 {
 
                 }
-                fieldelement(TotalQuantity; OrderHeader."Total Qty")
+                fieldelement(TotalQuantity; GudfoodOrderHeader."Total Qty")
                 {
 
                 }
-                fieldelement(TotalAmount; OrderHeader."Total Amount")
+                fieldelement(TotalAmount; GudfoodOrderHeader."Total Amount")
                 {
 
                 }
-                tableelement(OrderLine; GudfoodOrderLine)
+                tableelement(GudfoodOrderLine; GudfoodOrderLine)
                 {
-                    fieldelement(OrderNo; OrderLine."Order No.")
+                    LinkTable = GudfoodOrderHeader;
+                    LinkFields = "Order No." = field("No.");
+                    fieldelement(OrderNo; GudfoodOrderLine."Order No.")
                     {
 
                     }
-                    fieldelement(DateCreated; OrderLine."Date Created")
+                    fieldelement(DateCreated; GudfoodOrderLine."Date Created")
                     {
 
                     }
-                    fieldelement(LineNo; OrderLine."Line No.")
+                    fieldelement(LineNo; GudfoodOrderLine."Line No.")
                     {
 
                     }
-                    fieldelement(ItemNo; OrderLine."Item No.")
+                    fieldelement(ItemNo; GudfoodOrderLine."Item No.")
                     {
 
                     }
-                    fieldelement(ItemType; OrderLine."Item Type")
+                    fieldelement(ItemType; GudfoodOrderLine."Item Type")
                     {
 
                     }
-                    fieldelement(Description; OrderLine.Description)
+                    fieldelement(Description; GudfoodOrderLine.Description)
                     {
 
                     }
-                    fieldelement(SelltoCustomerNo; OrderLine."Sell- to Customer No.")
+                    fieldelement(SelltoCustomerNo; GudfoodOrderLine."Sell- to Customer No.")
                     {
 
                     }
-                    fieldelement(Amount; OrderLine.Amount)
+                    fieldelement(Amount; GudfoodOrderLine.Amount)
                     {
 
                     }
-                    fieldelement(UnitPrice; OrderLine."Unit Price")
+                    fieldelement(UnitPrice; GudfoodOrderLine."Unit Price")
                     {
 
                     }
-                    fieldelement(Quantity; OrderLine.Quantity)
+                    fieldelement(Quantity; GudfoodOrderLine.Quantity)
                     {
 
                     }

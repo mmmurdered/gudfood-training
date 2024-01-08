@@ -35,6 +35,7 @@ codeunit 50100 GudfoodOrderPost
                     REPEAT
                         PostedGudfoodOrderLine.TRANSFERFIELDS(GudfoodOrderLine, TRUE);
                         PostedGudfoodOrderLine."Order No." := GudfoodOrderHeader."Posting No.";
+                        PostedGudfoodOrderLine."Date Created" := Today;
                         PostedGudfoodOrderLine.INSERT(TRUE);
                     UNTIL GudfoodOrderLine.NEXT = 0;
                 end;

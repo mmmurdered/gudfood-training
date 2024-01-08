@@ -1,7 +1,7 @@
 table 50103 PostedGudfoodOrderHeader
 {
     DataClassification = ToBeClassified;
-    Caption = 'Posted Gudfood Order Header';
+    CaptionML = ENU = 'Posted Gudfood Order Header', UKR = 'Заголовок Опублікованого Замовлення Гудфуд';
     TableType = Normal;
 
     fields
@@ -54,12 +54,16 @@ table 50103 PostedGudfoodOrderHeader
         {
             CaptionML = UKR = 'Загальна кількість', ENU = 'Total Quantity';
             Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum(PostedGudfoodOrderline.Quantity where("Order No." = field("Posting No.")));
         }
 
         field(51; "Total Amount"; Decimal)
         {
             CaptionML = UKR = 'Загальна сума', ENU = 'Total Amount';
             Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum(PostedGudfoodOrderline.Amount where("Order No." = field("Posting No.")));
         }
     }
 

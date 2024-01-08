@@ -1,12 +1,9 @@
 page 50105 PostedGudfoodOrderSubpage
 {
+    CaptionML = ENU = 'Posted Gudfood Order Subpage', UKR = 'Опублікована Підсторінка Замовлення Гудфуд';
     PageType = ListPart;
     ApplicationArea = All;
-    UsageCategory = Administration;
     Editable = false;
-    DeleteAllowed = false;
-    ModifyAllowed = false;
-    InsertAllowed = false;
     SourceTable = PostedGudfoodOrderline;
     AutoSplitKey = true;
 

@@ -1,5 +1,6 @@
 page 50103 GudfoodOrderSubpage
 {
+    CaptionML = ENU = 'Gudfood Order Subpage', UKR = 'Гудфуд Підсторінка Замовлення';
     PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Administration;
@@ -45,6 +46,10 @@ page 50103 GudfoodOrderSubpage
                 field("Quantity"; Rec.Quantity)
                 {
                     ApplicationArea = All;
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update(true);
+                    end;
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {

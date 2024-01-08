@@ -1,6 +1,6 @@
 page 50102 GudfoodItemPicture
 {
-    Caption = 'Gudfood Item Picture';
+    CaptionML = ENU = 'Gudfood Item Picture', UKR = 'Гудфуд Зображення Товару';
     PageType = CardPart;
     ApplicationArea = All;
     SourceTable = GudfoodItem;
@@ -11,6 +11,7 @@ page 50102 GudfoodItemPicture
         {
             field(Picture; Rec.Picture)
             {
+                ToolTipML = ENU = 'Picture of the item', UKR = 'Зображення товару';
                 ApplicationArea = All;
             }
             field(Description; Rec.Description)
@@ -19,45 +20,4 @@ page 50102 GudfoodItemPicture
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ImportPicture)
-            {
-                ApplicationArea = All;
-                Caption = 'Import';
-                Image = Import;
-                ToolTip = 'Import a picture file.';
-                Visible = true;
-
-                trigger OnAction()
-                begin
-                    ImportFromDevice();
-                end;
-            }
-        }
-    }
-
-    procedure ImportFromDevice()
-    var
-        FileManagement: Codeunit "File Management";
-        FileName: Text;
-        ClientFileName: Text;
-        InStr: InStream;
-    begin
-        Rec.Find();
-        Rec.TestField(Code);
-        ClientFileName := '';
-        UploadIntoStream('Select your picture', '', '', ClientFileName, InStr);
-        if ClientFileName <> '' then
-            FileName := FileManagement.GetFileName(ClientFileName);
-        if FileName = '' then
-            Error('');
-        Clear(Rec.Picture);
-        Rec.Picture.ImportStream(InStr, FileName);
-        Rec.Modify(true);
-    end;
-
 }

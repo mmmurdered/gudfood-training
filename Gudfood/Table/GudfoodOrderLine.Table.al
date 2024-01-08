@@ -15,7 +15,6 @@ table 50102 GudfoodOrderLine
             CaptionML = UKR = 'Номер рядку', ENU = 'Line No.';
             Editable = false;
             DataClassification = ToBeClassified;
-            InitValue = 10000;
         }
         field(10; "Sell- to Customer No."; Code[20])
         {
@@ -34,6 +33,7 @@ table 50102 GudfoodOrderLine
         {
             CaptionML = UKR = 'Номер товару', ENU = 'Item No.';
             TableRelation = GudfoodItem.Code where(Code = field("Item No."));
+            NotBlank = true;
 
             trigger OnValidate()
             begin
@@ -65,7 +65,7 @@ table 50102 GudfoodOrderLine
         {
             CaptionML = UKR = 'Кількість', ENU = 'Quantity';
             MinValue = 0;
-
+            NotBlank = true;
             trigger OnValidate()
             begin
                 Amount := Quantity * "Unit Price";
@@ -100,8 +100,6 @@ table 50102 GudfoodOrderLine
     trigger OnInsert();
     begin
         GudfoodOrderLineAutoIncrement.GetNextLineNo("Line No.", Rec."Order No.");
-        //TODO GET LAST 
-        //Rec."Line No." := xRec."Line No." + 10000;
         GudfoodOrderHeader.Get("Order No.");
         "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
         "Date Created" := GudfoodOrderHeader."Date Created";

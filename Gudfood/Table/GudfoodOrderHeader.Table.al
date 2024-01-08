@@ -1,6 +1,6 @@
 table 50101 GudfoodOrderHeader
 {
-    Caption = 'Gudfood Order Header';
+    CaptionML = ENU = 'Gudfood Order Header', UKR = 'Заголовок Замовлення Гудфуд';
     TableType = Normal;
     DataClassification = ToBeClassified;
 
@@ -79,10 +79,13 @@ table 50101 GudfoodOrderHeader
     var
         NoSeriesMgt: Codeunit NoSeriesManagement;
     begin
-        //if "No." <> '' then begin
-        Rec."No." := NoSeriesMgt.GetNextNo('FUD-ORD', Today, true);
-        Rec."Posting No." := NoSeriesMgt.GetNextNo('FUD-PSTD', Today, true);
         Rec."Date Created" := Today;
-        // end;
+        if "No." = '' then begin
+            Rec."No." := NoSeriesMgt.GetNextNo('FUD-ORD', Today, true);
+        end;
+
+        if "Posting No." = '' then begin
+            Rec."Posting No." := NoSeriesMgt.GetNextNo('FUD-PSTD', Today, true);
+        end;
     end;
 }
