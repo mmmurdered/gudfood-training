@@ -1,6 +1,6 @@
 page 50100 GudfoodItemList
 {
-    CaptionML = UKR = 'Гудфут список товарів', ENU = 'Gudfood Item Card';
+    CaptionML = UKR = 'Гудфут список товарів', ENU = 'Gudfood Item List';
     UsageCategory = Lists;
     CardPageId = 50101;
     PageType = List;

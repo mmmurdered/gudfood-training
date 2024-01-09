@@ -1,6 +1,6 @@
 page 50106 PostedGudfoodOrder
 {
-    CaptionML = ENU = 'Posted Gudfood Order', UKR = 'Опубліковане Замовлення Гудфуд';
+    CaptionML = ENU = 'Posted Gudfood Order', UKR = 'Опубліковані Замовлення Гудфуд';
     PageType = Document;
     ApplicationArea = All;
     UsageCategory = Administration;
