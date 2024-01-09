@@ -2,20 +2,17 @@ table 50101 GudfoodOrderHeader
 {
     CaptionML = ENU = 'Gudfood Order Header', UKR = 'Заголовок Замовлення Гудфуд';
     TableType = Normal;
-    DataClassification = ToBeClassified;
 
     fields
     {
         field(1; "No."; Code[20])
         {
             CaptionML = UKR = 'Номер Замовлення', ENU = 'Order Number';
-            DataClassification = ToBeClassified;
         }
         field(10; "Sell-to Customer No."; Code[20])
         {
             CaptionML = UKR = 'Продано клієнту за номером', ENU = 'Sell to Customer No.';
             TableRelation = Customer."No." where("No." = field("Sell-to Customer No."));
-            DataClassification = ToBeClassified;
 
             trigger OnValidate()
             var
@@ -31,18 +28,15 @@ table 50101 GudfoodOrderHeader
         field(11; "Sell-to Customer Name"; Text[100])
         {
             CaptionML = UKR = 'Продано клієнту за Іменем', ENU = 'Sell-to Customer Name';
-            DataClassification = ToBeClassified;
         }
         field(20; "Order Date"; Date)
         {
             CaptionML = UKR = 'Дата замовлення', ENU = 'Order Date';
-            DataClassification = ToBeClassified;
         }
         //FUD-PSTD
         field(30; "Posting No."; Code[20])
         {
             CaptionML = UKR = 'Пост номер', ENU = 'Posting No.';
-            DataClassification = ToBeClassified;
         }
         field(40; "Date Created"; Date)
         {

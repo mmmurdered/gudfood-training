@@ -19,49 +19,40 @@ page 50104 GudfoodOrder
                 {
                     ToolTipML = ENU = 'Input No of the Order or it will inserted manually',
                     UKR = 'Введіть номер замовлення вручну, або воно буде присвоєно автоматично';
-                    ApplicationArea = All;
                 }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
                     ToolTipML = ENU = 'Choose Customer sell to of the Order', UKR = 'Оберіть клієнта замовлення';
-                    ApplicationArea = All;
                 }
                 field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
                     ToolTipML = ENU = 'Customer name is not editable', UKR = 'Креденціали клієнта не радугуються';
-                    ApplicationArea = All;
                 }
                 field("Order Date"; Rec."Order Date")
                 {
                     ToolTipML = ENU = 'Input Order Date', UKR = 'Введіть Дату замовлення';
-                    ApplicationArea = All;
                 }
                 field("Posting No."; Rec."Posting No.")
                 {
                     ToolTipML = ENU = 'Input No of the Posted Order or it will inserted manually',
                     UKR = 'Введіть номер публікації замовлення вручну, або воно буде присвоєно автоматично';
-                    ApplicationArea = All;
                 }
                 field("Date Created"; Rec."Date Created")
                 {
                     ToolTipML = ENU = 'Date Created is not editable', UKR = 'Дата створення не радугується';
-                    ApplicationArea = All;
                 }
                 field("Total Qty"; Rec."Total Qty")
                 {
                     ToolTipML = ENU = 'Total Quantity of Order', UKR = 'Загальна кількість замовлення';
-                    ApplicationArea = All;
                 }
                 field("Total Amount"; Rec."Total Amount")
                 {
                     ToolTipML = ENU = 'Total Amount of Order', UKR = 'Загальна сума замовлення';
-                    ApplicationArea = All;
                 }
             }
             part(SalesLine; GudfoodOrderSubpage)
             {
                 UpdatePropagation = Both;
-                ApplicationArea = all;
                 SubPageLink = "Order No." = field("No.");
             }
         }
@@ -82,6 +73,9 @@ page 50104 GudfoodOrder
                     OrderPostCodeunit.PostOrder(Rec);
                 end;
             }
+        }
+        area(Reporting)
+        {
             action(Report)
             {
                 CaptionML = ENU = 'Print Report', UKR = 'Надрукувати звіт';

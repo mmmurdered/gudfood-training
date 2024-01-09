@@ -15,37 +15,37 @@ page 50103 GudfoodOrderSubpage
                 field("Order No."; Rec."Order No.")
                 {
                     Visible = false;
-                    ApplicationArea = All;
+
                 }
                 field("Line No."; Rec."Line No.")
                 {
-                    ApplicationArea = All;
+
                 }
                 field("Sell-to Customer No."; Rec."Sell- to Customer No.")
                 {
                     Visible = false;
-                    ApplicationArea = All;
+
                 }
                 field("Date Created"; Rec."Date Created")
                 {
                     Visible = false;
-                    ApplicationArea = All;
+
                 }
                 field("Item No."; Rec."Item No.")
                 {
-                    ApplicationArea = All;
+
                 }
                 field("Item Type"; Rec."Item Type")
                 {
-                    ApplicationArea = All;
+
                 }
                 field("Description"; Rec.Description)
                 {
-                    ApplicationArea = All;
+
                 }
                 field("Quantity"; Rec.Quantity)
                 {
-                    ApplicationArea = All;
+
                     trigger OnValidate()
                     begin
                         CurrPage.Update(true);
@@ -53,11 +53,11 @@ page 50103 GudfoodOrderSubpage
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {
-                    ApplicationArea = All;
+
                 }
                 field("Amount"; Rec.Amount)
                 {
-                    ApplicationArea = All;
+
                 }
             }
         }

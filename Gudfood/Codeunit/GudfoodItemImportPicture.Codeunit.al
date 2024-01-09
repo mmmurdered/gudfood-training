@@ -11,11 +11,12 @@ codeunit 50102 GudfoodItemImportPicture
         FileName: Text;
         ClientFileName: Text;
         InStr: InStream;
+        SelectPictureLabel: Label 'Select item image: ';
     begin
         GudfoodItem.Find();
         GudfoodItem.TestField(Code);
         ClientFileName := '';
-        UploadIntoStream('Select your picture', '', '', ClientFileName, InStr);
+        UploadIntoStream(SelectPictureLabel, '', '', ClientFileName, InStr);
         if ClientFileName <> '' then
             FileName := FileManagement.GetFileName(ClientFileName);
         if FileName = '' then

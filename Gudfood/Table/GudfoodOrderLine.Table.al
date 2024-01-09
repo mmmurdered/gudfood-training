@@ -1,7 +1,6 @@
 table 50102 GudfoodOrderLine
 {
     CaptionML = UKR = 'Gudfood Рядок Замовлення', ENU = 'Gudfood Order Line';
-    DataClassification = ToBeClassified;
 
     fields
     {
@@ -14,13 +13,13 @@ table 50102 GudfoodOrderLine
         {
             CaptionML = UKR = 'Номер рядку', ENU = 'Line No.';
             Editable = false;
-            DataClassification = ToBeClassified;
+
         }
         field(10; "Sell- to Customer No."; Code[20])
         {
             CaptionML = UKR = 'Номер клієнта', ENU = 'Sell- to Customer No.';
             Editable = false;
-            DataClassification = ToBeClassified;
+
         }
         field(20; "Date Created"; Date)
         {
@@ -59,7 +58,7 @@ table 50102 GudfoodOrderLine
         {
             CaptionML = UKR = 'Опис товару', ENU = 'Description';
             Editable = false;
-            DataClassification = ToBeClassified;
+
         }
         field(50; Quantity; Decimal)
         {

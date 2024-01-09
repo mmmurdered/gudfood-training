@@ -2,27 +2,23 @@ table 50100 GudfoodItem
 {
     CaptionML = UKR = 'Гудфуд товар', ENU = 'Goodfud Item';
     TableType = Normal;
-    DataClassification = ToBeClassified;
 
     fields
     {
         field(1; Code; Code[20])
         {
             CaptionML = UKR = 'Код', ENU = 'Code';
-            DataClassification = ToBeClassified;
         }
 
         field(10; Description; Text[100])
         {
             CaptionML = UKR = 'Опис', ENU = 'Description';
-            DataClassification = ToBeClassified;
 
         }
 
         field(20; "Unit Price"; Decimal)
         {
             CaptionML = UKR = 'Ціна за одиницю', ENU = 'Unit Price';
-            DataClassification = ToBeClassified;
 
         }
 
@@ -49,15 +45,12 @@ table 50100 GudfoodItem
         field(50; "Shelf Life"; Date)
         {
             CaptionML = UKR = 'Термін придатності', ENU = 'Shelf Life';
-            DataClassification = ToBeClassified;
 
         }
 
         field(60; Picture; MediaSet)
         {
             CaptionML = UKR = 'Зображення', ENU = 'Picture';
-            DataClassification = ToBeClassified;
-
         }
 
     }
@@ -78,7 +71,19 @@ table 50100 GudfoodItem
     begin
         if Rec.Code = '' then begin
             SalesReceivablesSetup.GET;
-            Rec.Code := NoSeriesMgt.GetNextNo('FUD', WorkDate(), true);
+            Rec.Code := NoSeriesMgt.GetNextNo('FUD', Today, true);
         end;
+    end;
+
+    trigger OnDelete()
+    var
+        GudfoodOrderLine: Record GudfoodOrderLine;
+        ErrorWhileDeleting: Label 'Cannot delete, item is on open orders';
+    begin
+        GudfoodOrderLine.SetRange("Item No.", Rec.Code);
+        if (GudfoodOrderLine.FindSet()) then
+            Error(ErrorWhileDeleting);
+
+        GudfoodOrderLine.DeleteAll(true);
     end;
 }

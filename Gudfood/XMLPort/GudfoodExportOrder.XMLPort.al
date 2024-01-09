@@ -1,7 +1,7 @@
 xmlport 50100 GudfoodOrderExport
 {
     Format = Xml;
-    Caption = 'Export Order to XML';
+    CaptionML = ENU = 'Export Order to XML', UKR = 'Експортувати в XML файл';
     Direction = Export;
 
     schema

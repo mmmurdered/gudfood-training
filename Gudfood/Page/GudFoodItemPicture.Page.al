@@ -12,11 +12,9 @@ page 50102 GudfoodItemPicture
             field(Picture; Rec.Picture)
             {
                 ToolTipML = ENU = 'Picture of the item', UKR = 'Зображення товару';
-                ApplicationArea = All;
             }
             field(Description; Rec.Description)
             {
-                ApplicationArea = All;
             }
         }
     }
