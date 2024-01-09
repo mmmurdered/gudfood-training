@@ -1,5 +1,5 @@
 profile GudfoodProfile
 {
-    Description = 'Gudfood Profile';
+    CaptionML = ENU = 'Gudfood Profile', UKR = 'Гудфуд Профіль';
     RoleCenter = GudfoodRoleCenter;
 }
