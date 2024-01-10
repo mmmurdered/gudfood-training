@@ -1,10 +1,10 @@
-page 50103 GudfoodOrderSubpage
+page 50103 "Gudfood Order Subpage"
 {
     CaptionML = ENU = 'Gudfood Order Subpage', UKR = 'Гудфуд Підсторінка Замовлення';
     PageType = ListPart;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = GudfoodOrderLine;
+    SourceTable = "Gudfood Order Line";
+    AutoSplitKey = true;
 
     layout
     {
@@ -45,7 +45,6 @@ page 50103 GudfoodOrderSubpage
                 }
                 field("Quantity"; Rec.Quantity)
                 {
-
                     trigger OnValidate()
                     begin
                         CurrPage.Update(true);
@@ -53,7 +52,10 @@ page 50103 GudfoodOrderSubpage
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {
-
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update(true);
+                    end;
                 }
                 field("Amount"; Rec.Amount)
                 {

@@ -1,7 +1,6 @@
-table 50103 PostedGudfoodOrderHeader
+table 50103 "Posted Gudfood Order Header"
 {
     CaptionML = ENU = 'Posted Gudfood Order Header', UKR = 'Заголовок Опублікованого Замовлення Гудфуд';
-    TableType = Normal;
 
     fields
     {
@@ -14,6 +13,7 @@ table 50103 PostedGudfoodOrderHeader
         {
             CaptionML = UKR = 'Продано клієнту за номером', ENU = 'Sell to Customer No.';
             Editable = false;
+            TableRelation = Customer."No.";
         }
         field(11; "Sell-to Customer Name"; Text[100])
         {
@@ -33,7 +33,7 @@ table 50103 PostedGudfoodOrderHeader
         }
         field(31; "Posting Date"; Date)
         {
-            CaptionML = UKR = 'Пост номер', ENU = 'Posting Date';
+            CaptionML = UKR = 'Дата постингу', ENU = 'Posting Date';
             Editable = false;
         }
         field(40; "Date Created"; Date)
@@ -47,7 +47,7 @@ table 50103 PostedGudfoodOrderHeader
             CaptionML = UKR = 'Загальна кількість', ENU = 'Total Quantity';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum(PostedGudfoodOrderline.Quantity where("Order No." = field("Posting No.")));
+            CalcFormula = sum("Posted Gudfood Order Line".Quantity where("Order No." = field("Posting No.")));
         }
 
         field(51; "Total Amount"; Decimal)
@@ -55,7 +55,7 @@ table 50103 PostedGudfoodOrderHeader
             CaptionML = UKR = 'Загальна сума', ENU = 'Total Amount';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum(PostedGudfoodOrderline.Amount where("Order No." = field("Posting No.")));
+            CalcFormula = sum("Posted Gudfood Order Line".Amount where("Order No." = field("Posting No.")));
         }
     }
 

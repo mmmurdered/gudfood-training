@@ -1,4 +1,4 @@
-table 50102 GudfoodOrderLine
+table 50102 "Gudfood Order Line"
 {
     CaptionML = UKR = 'Gudfood Рядок Замовлення', ENU = 'Gudfood Order Line';
 
@@ -7,44 +7,46 @@ table 50102 GudfoodOrderLine
         field(1; "Order No."; Code[20])
         {
             CaptionML = UKR = 'Номер замовлення', ENU = 'Order No.';
-            TableRelation = GudfoodOrderHeader;
+            TableRelation = "Gudfood Order Header";
         }
         field(2; "Line No."; Integer)
         {
             CaptionML = UKR = 'Номер рядку', ENU = 'Line No.';
             Editable = false;
-
+            AutoIncrement = true;
         }
         field(10; "Sell- to Customer No."; Code[20])
         {
             CaptionML = UKR = 'Номер клієнта', ENU = 'Sell- to Customer No.';
             Editable = false;
-
+            TableRelation = Customer;
         }
         field(20; "Date Created"; Date)
         {
             CaptionML = UKR = 'Дата створення', ENU = 'Date Created';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = lookup(GudfoodOrderHeader."Date Created" where("No." = field("Order No.")));
+            CalcFormula = lookup("Gudfood Order Header"."Date Created" where("No." = field("Order No.")));
         }
         field(30; "Item No."; Code[20])
         {
             CaptionML = UKR = 'Номер товару', ENU = 'Item No.';
-            TableRelation = GudfoodItem.Code where(Code = field("Item No."));
+            TableRelation = "Gudfood Item".Code;
             NotBlank = true;
 
             trigger OnValidate()
+            var
+                NotFoundMessage: Label 'Not found specified gudfood item';
+                ShelfDateExpired: Label 'Shelf date is expired, please choose another item';
             begin
-                if "Item No." <> '' then begin
-                    GudfoodItem.Get("Item No.");
-                    Description := GudfoodItem.Description;
-                    "Unit Price" := GudfoodItem."Unit Price";
-                    "Item Type" := GudfoodItem.Type;
-                    Amount := Quantity * "Unit Price";
-                    if GudfoodItem."Shelf Life" < Today then
-                        Message(ShelfDateExpired);
-                end;
+                GudfoodItem.Get("Item No.");
+                if GudfoodItem."Shelf Life" < Today then
+                    Message(ShelfDateExpired);
+                GudfoodItem.Get("Item No.");
+                Description := GudfoodItem.Description;
+                "Unit Price" := GudfoodItem."Unit Price";
+                "Item Type" := GudfoodItem.Type;
+                Amount := Quantity * "Unit Price";
             end;
         }
         field(31; "Item Type"; Option)
@@ -52,7 +54,7 @@ table 50102 GudfoodOrderLine
             CaptionML = UKR = 'Тип товару', ENU = 'Item Type';
             OptionMembers = " ","Salat","Burger","Capcake","Drink";
             FieldClass = FlowField;
-            CalcFormula = lookup(GudfoodItem.Type where(Code = field("Item No.")));
+            CalcFormula = lookup("Gudfood Item".Type where(Code = field("Item No.")));
         }
         field(40; Description; Text[100])
         {
@@ -67,17 +69,21 @@ table 50102 GudfoodOrderLine
             NotBlank = true;
             trigger OnValidate()
             begin
-                Amount := Quantity * "Unit Price";
+                GudfoodManagment.UpdateAmount(Rec);
             end;
         }
         field(60; "Unit Price"; Decimal)
         {
             CaptionML = UKR = 'Ціна за одиницю', ENU = 'Unit Price';
-            Editable = false;
+
+            trigger OnValidate()
+            begin
+                GudfoodManagment.UpdateAmount(Rec);
+            end;
         }
         field(70; Amount; Decimal)
         {
-            CaptionML = UKR = 'Кількість', ENU = 'Amount';
+            CaptionML = UKR = 'Сума', ENU = 'Amount';
             Editable = false;
         }
     }
@@ -91,16 +97,19 @@ table 50102 GudfoodOrderLine
     }
 
     var
-        GudfoodItem: Record GudfoodItem;
-        GudfoodOrderHeader: Record GudfoodOrderHeader;
-        ShelfDateExpired: Label 'Shelf date is expired, please choose another item';
-        GudfoodOrderLineAutoIncrement: Codeunit GudfoodOrderLineAutoincrement;
+        GudfoodItem: Record "Gudfood Item";
+        GudfoodOrderHeader: Record "Gudfood Order Header";
+        GudfoodManagment: Codeunit "Gudfood Managment Codeunit";
 
     trigger OnInsert();
     begin
-        GudfoodOrderLineAutoIncrement.GetNextLineNo("Line No.", Rec."Order No.");
         GudfoodOrderHeader.Get("Order No.");
         "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
         "Date Created" := GudfoodOrderHeader."Date Created";
+    end;
+
+    local procedure UpdateAmount()
+    begin
+        Amount := Quantity * "Unit Price";
     end;
 }

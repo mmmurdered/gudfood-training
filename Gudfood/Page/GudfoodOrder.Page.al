@@ -1,13 +1,10 @@
-page 50104 GudfoodOrder
+page 50104 "Gudfood Order"
 {
     CaptionML = ENU = 'Gudfood Order', UKR = 'Гудфуд Замовлення';
     PageType = Document;
     ApplicationArea = All;
-    SourceTable = GudfoodOrderHeader;
+    SourceTable = "Gudfood Order Header";
     UsageCategory = Documents;
-    ModifyAllowed = false;
-    InsertAllowed = true;
-    DeleteAllowed = true;
 
     layout
     {
@@ -17,40 +14,40 @@ page 50104 GudfoodOrder
             {
                 field("No."; Rec."No.")
                 {
-                    ToolTipML = ENU = 'Input No of the Order or it will inserted manually',
-                    UKR = 'Введіть номер замовлення вручну, або воно буде присвоєно автоматично';
+                    ToolTipML = ENU = 'Specified No of the Order, can be generated automatically',
+                    UKR = 'Вказаний номер замовлення, може бути згенерований автоматично';
                 }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
-                    ToolTipML = ENU = 'Choose Customer sell to of the Order', UKR = 'Оберіть клієнта замовлення';
+                    ToolTipML = ENU = 'Specified Customer sell to of the Order', UKR = 'Вказаний клієнт замовлення';
                 }
                 field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
-                    ToolTipML = ENU = 'Customer name is not editable', UKR = 'Креденціали клієнта не радугуються';
+                    ToolTipML = ENU = 'Specified Customer name', UKR = 'Вказані Креденціали клієнта';
                 }
                 field("Order Date"; Rec."Order Date")
                 {
-                    ToolTipML = ENU = 'Input Order Date', UKR = 'Введіть Дату замовлення';
+                    ToolTipML = ENU = 'Specified Order Date', UKR = 'Введіть Дату замовлення';
                 }
                 field("Posting No."; Rec."Posting No.")
                 {
-                    ToolTipML = ENU = 'Input No of the Posted Order or it will inserted manually',
+                    ToolTipML = ENU = 'Specified No of the Posted Order, can be generated automatically',
                     UKR = 'Введіть номер публікації замовлення вручну, або воно буде присвоєно автоматично';
                 }
                 field("Date Created"; Rec."Date Created")
                 {
-                    ToolTipML = ENU = 'Date Created is not editable', UKR = 'Дата створення не радугується';
+                    ToolTipML = ENU = 'Specified Created Date', UKR = 'Вказана дата створення';
                 }
                 field("Total Qty"; Rec."Total Qty")
                 {
-                    ToolTipML = ENU = 'Total Quantity of Order', UKR = 'Загальна кількість замовлення';
+                    ToolTipML = ENU = 'Specified Quantity of Order', UKR = 'Вказана загальна кількість замовлення';
                 }
                 field("Total Amount"; Rec."Total Amount")
                 {
-                    ToolTipML = ENU = 'Total Amount of Order', UKR = 'Загальна сума замовлення';
+                    ToolTipML = ENU = 'Specified Amount of Order', UKR = 'Вказана загальна сума замовлення';
                 }
             }
-            part(SalesLine; GudfoodOrderSubpage)
+            part(SalesLine; "Gudfood Order Subpage")
             {
                 UpdatePropagation = Both;
                 SubPageLink = "Order No." = field("No.");
@@ -68,10 +65,7 @@ page 50104 GudfoodOrder
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 Image = Post;
-                trigger OnAction()
-                begin
-                    OrderPostCodeunit.PostOrder(Rec);
-                end;
+                RunObject = codeunit "Gudfood Order Post";
             }
         }
         area(Reporting)
@@ -83,16 +77,8 @@ page 50104 GudfoodOrder
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 Image = Report;
-                trigger OnAction()
-                var
-                    GudfoodOrderReport: Report GudfoodOrderReport;
-                    GudfoodOrderHeader: Record GudfoodOrderHeader;
-                begin
-                    GudfoodOrderHeader.SetCurrentKey("No.");
-                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
-                    GudfoodOrderReport.SetTableView(GudfoodOrderHeader);
-                    GudfoodOrderReport.Run();
-                end;
+
+                RunObject = codeunit "Gudfood Report Run";
             }
             action(ExportOrder)
             {
@@ -101,33 +87,8 @@ page 50104 GudfoodOrder
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 Image = XMLFile;
-                trigger OnAction()
-                var
-                    GudfoodExportOrder: XmlPort GudfoodOrderExport;
-                    GudfoodOrderHeader: Record GudfoodOrderHeader;
-                begin
-                    GudfoodOrderHeader.SetCurrentKey("No.");
-                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
-                    GudfoodExportOrder.SetTableView(GudfoodOrderHeader);
-                    GudfoodExportOrder.Run();
-                end;
+                RunObject = codeunit "Gudfood XML Export";
             }
         }
     }
-
-    var
-        SalesReceivablesSetup: Record "Sales & Receivables Setup";
-        NoSeriesMgt: Codeunit "NoSeriesManagement";
-        OrderPostCodeunit: Codeunit GudfoodOrderPost;
-
-    trigger OnDeleteRecord(): Boolean
-    var
-        GudfoodOrderLine: Record GudfoodOrderLine;
-    begin
-        GudfoodOrderLine.SetFilter("Order No.", Rec."No.");
-        if GudfoodOrderLine.FindSet(true) then begin
-            GudfoodOrderLine.DeleteAll(true);
-        end;
-    end;
-
 }

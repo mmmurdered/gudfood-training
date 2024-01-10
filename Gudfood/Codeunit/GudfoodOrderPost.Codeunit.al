@@ -1,22 +1,20 @@
-codeunit 50100 GudfoodOrderPost
+codeunit 50100 "Gudfood Order Post"
 {
-    TableNo = GudfoodOrderHeader;
+    TableNo = "Gudfood Order Header";
 
     trigger OnRun()
     begin
-
+        PostOrder(Rec);
     end;
 
+    procedure PostOrder(var GudfoodOrder: Record "Gudfood Order Header")
     var
-        PostedGudfoodOrderLine: Record PostedGudfoodOrderline;
-        GudfoodOrderLine: Record GudfoodOrderLine;
-        PostedGudfoodOrderHeader: Record PostedGudfoodOrderHeader;
-        GudfoodOrderHeader: Record GudfoodOrderHeader;
+        PostedGudfoodOrderLine: Record "Posted Gudfood Order Line";
+        GudfoodOrderLine: Record "Gudfood Order Line";
+        PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
+        GudfoodOrderHeader: Record "Gudfood Order Header";
         ConfirmationMessage: Label 'Are you sure to post resords?';
-        CancelMessage: Label 'Posting was cancelled';
         SuccessfullyPostedOrderMessage: Label 'The order has been successfully posted';
-
-    procedure PostOrder(var GudfoodOrder: Record GudfoodOrderHeader)
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
             if GudfoodOrder."No." <> '' then begin

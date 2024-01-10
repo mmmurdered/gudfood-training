@@ -1,14 +1,14 @@
-xmlport 50100 GudfoodOrderExport
+xmlport 50100 "Gudfood Order Export"
 {
-    Format = Xml;
     CaptionML = ENU = 'Export Order to XML', UKR = 'Експортувати в XML файл';
+    Format = Xml;
     Direction = Export;
 
     schema
     {
         textelement(OrderOrderHeader)
         {
-            tableelement(GudfoodOrderHeader; GudfoodOrderHeader)
+            tableelement(GudfoodOrderHeader; "Gudfood Order Header")
             {
                 fieldelement(No; GudfoodOrderHeader."No.")
                 {
@@ -42,7 +42,7 @@ xmlport 50100 GudfoodOrderExport
                 {
 
                 }
-                tableelement(GudfoodOrderLine; GudfoodOrderLine)
+                tableelement(GudfoodOrderLine; "Gudfood Order Line")
                 {
                     LinkTable = GudfoodOrderHeader;
                     LinkFields = "Order No." = field("No.");

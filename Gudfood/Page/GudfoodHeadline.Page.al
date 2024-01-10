@@ -1,5 +1,6 @@
-page 50110 GudfoodHeadline
+page 50110 "Gudfood Headline"
 {
+    CaptionML = ENU = 'Gudfood Headline', UKR = 'Заголовок Гудфуд';
     PageType = HeadlinePart;
     ApplicationArea = All;
 
@@ -23,5 +24,5 @@ page 50110 GudfoodHeadline
         }
     }
     var
-        GudfoodHeadlineText: Codeunit GudfoodHeadlineText;
+        GudfoodHeadlineText: Codeunit "Gudfood Managment Codeunit";
 }

@@ -1,4 +1,4 @@
-table 50104 PostedGudfoodOrderline
+table 50104 "Posted Gudfood Order Line"
 {
     CaptionML = UKR = 'Опублікований Рядок Замовлення Гудфуд', ENU = 'Posted Gudfood Order Line';
 
@@ -24,14 +24,14 @@ table 50104 PostedGudfoodOrderline
         field(30; "Item No."; Code[20])
         {
             CaptionML = UKR = 'Номер товару', ENU = 'Item No.';
-            TableRelation = GudfoodItem.Code where(Code = field("Item No."));
+            TableRelation = "Gudfood Item".Code where(Code = field("Item No."));
         }
         field(31; "Item Type"; Option)
         {
             CaptionML = UKR = 'Тип товару', ENU = 'Item Type';
             OptionMembers = " ","Salat","Burger","Capcake","Drink";
             FieldClass = FlowField;
-            CalcFormula = lookup(GudfoodItem.Type where(Code = field("Item No.")));
+            CalcFormula = lookup("Gudfood Item".Type where(Code = field("Item No.")));
         }
         field(40; Description; Text[100])
         {

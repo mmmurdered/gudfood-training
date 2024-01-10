@@ -1,4 +1,4 @@
-page 50109 GudfoodRoleCenter
+page 50109 "Gudfood Role Center"
 {
     PageType = RoleCenter;
     ApplicationArea = All;
@@ -7,11 +7,11 @@ page 50109 GudfoodRoleCenter
     {
         area(RoleCenter)
         {
-            part(Headline; GudfoodHeadline)
+            part(Headline; "Gudfood Headline")
             {
 
             }
-            part("Sales Order"; GudfoodOrderActivities)
+            part("Sales Order"; "Gudfood Order Activities")
             {
                 ApplicationArea = All;
             }

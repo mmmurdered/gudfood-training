@@ -1,11 +1,10 @@
-page 50107 GudfoodOrderList
+page 50107 "Gudfood Order List"
 {
     CaptionML = ENU = 'Gudfood Order List', UKR = 'Гудфуд Список Замовлень';
     PageType = List;
     UsageCategory = Lists;
-    SourceTable = GudfoodOrderHeader;
-    CardPageId = GudfoodOrder;
-    ModifyAllowed = false;
+    SourceTable = "Gudfood Order Header";
+    CardPageId = "Gudfood Order";
     ApplicationArea = All;
 
     layout
@@ -42,6 +41,15 @@ page 50107 GudfoodOrderList
     {
         area(Processing)
         {
+            action(Post)
+            {
+                CaptionML = ENU = 'Post', UKR = 'Опублікувати';
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Image = Post;
+                RunObject = codeunit "Gudfood Order Post";
+            }
             action(ExportOrder)
             {
                 CaptionML = ENU = 'Export to XML', UKR = 'Експортувати в XML';
@@ -50,26 +58,11 @@ page 50107 GudfoodOrderList
                 PromotedOnly = true;
                 Image = XMLFile;
                 trigger OnAction()
-                var
-                    GudfoodExportOrder: XmlPort GudfoodOrderExport;
-                    GudfoodOrderHeader: Record GudfoodOrderHeader;
-                    GudfoodOrderLine: Record GudfoodOrderLine;
                 begin
                     CurrPage.SetSelectionFilter(Rec);
-                    Xmlport.Run(Xmlport::GudfoodOrderExport, false, false, Rec);
-                    //GudfoodExportOrder.Run();
+                    Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
                 end;
             }
         }
     }
-
-    trigger OnDeleteRecord(): Boolean
-    var
-        GudfoodOrderLine: Record GudfoodOrderLine;
-    begin
-        GudfoodOrderLine.SetFilter("Order No.", Rec."No.");
-        if GudfoodOrderLine.FindSet(true) then begin
-            GudfoodOrderLine.DeleteAll(true);
-        end;
-    end;
 }

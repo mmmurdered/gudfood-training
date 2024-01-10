@@ -1,12 +1,13 @@
-report 50100 GudfoodOrderReport
+report 50100 "Gudfood Order Report"
 {
+    CaptionML = ENU = 'Gudfood Order Report', UKR = 'Гудфуд Звіт Замовлення';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultRenderingLayout = RDLCLayout;
 
     dataset
     {
-        dataitem(GudfoodOrderHeader; GudfoodOrderHeader)
+        dataitem(GudfoodOrderHeader; "Gudfood Order Header")
         {
             column(Date_Created; "Date Created")
             {
@@ -28,9 +29,10 @@ report 50100 GudfoodOrderReport
             {
                 IncludeCaption = true;
             }
-            dataitem(GudfoodOrderLine; GudfoodOrderLine)
+            dataitem(GudfoodOrderLine; "Gudfood Order Line")
             {
                 DataItemLink = "Order No." = field("No.");
+
                 column(Item_No_; "Item No.")
                 {
                     IncludeCaption = true;

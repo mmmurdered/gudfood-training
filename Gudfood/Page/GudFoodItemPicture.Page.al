@@ -1,9 +1,9 @@
-page 50102 GudfoodItemPicture
+page 50102 "Gudfood Item Picture"
 {
     CaptionML = ENU = 'Gudfood Item Picture', UKR = 'Гудфуд Зображення Товару';
     PageType = CardPart;
     ApplicationArea = All;
-    SourceTable = GudfoodItem;
+    SourceTable = "Gudfood Item";
 
     layout
     {
@@ -12,9 +12,6 @@ page 50102 GudfoodItemPicture
             field(Picture; Rec.Picture)
             {
                 ToolTipML = ENU = 'Picture of the item', UKR = 'Зображення товару';
-            }
-            field(Description; Rec.Description)
-            {
             }
         }
     }

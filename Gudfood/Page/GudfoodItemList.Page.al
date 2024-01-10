@@ -1,13 +1,10 @@
-page 50100 GudfoodItemList
+page 50100 "Gudfood Item List"
 {
     CaptionML = UKR = 'Гудфут список товарів', ENU = 'Gudfood Item List';
     UsageCategory = Lists;
-    CardPageId = 50101;
+    CardPageId = "Gudfood Item Card";
     PageType = List;
-    SourceTable = GudfoodItem;
-    ModifyAllowed = false;
-    InsertAllowed = true;
-    DeleteAllowed = true;
+    SourceTable = "Gudfood Item";
     ApplicationArea = All;
 
     layout
@@ -52,23 +49,9 @@ page 50100 GudfoodItemList
         }
         area(FactBoxes)
         {
-            part(Picture; GudfoodItemPicture)
+            part(Picture; "Gudfood Item Picture")
             {
                 SubPageLink = Code = field(Code);
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                trigger OnAction()
-                begin
-
-                end;
             }
         }
     }

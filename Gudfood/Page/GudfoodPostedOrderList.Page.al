@@ -1,17 +1,27 @@
-page 50106 "Posted Gudfood Order"
+page 50111 "Posted Gudfood Order List"
 {
-    CaptionML = ENU = 'Posted Gudfood Order', UKR = 'Опубліковані Замовлення Гудфуд';
-    PageType = Document;
-    ApplicationArea = All;
+    CaptionML = ENU = 'Posted Gudfood Order List', UKR = 'Опубліковані Гудфуд Замовлення';
+    PageType = List;
+    UsageCategory = History;
     SourceTable = "Posted Gudfood Order Header";
+    CardPageId = "Posted Gudfood Order";
+    ApplicationArea = All;
     Editable = false;
 
     layout
     {
         area(Content)
         {
-            group(Header)
+            repeater("Posted Orders")
             {
+                field("Posted No."; Rec."Posting No.")
+                {
+
+                }
+                field("Posted Date"; Rec."Posting Date")
+                {
+
+                }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
 
@@ -28,10 +38,6 @@ page 50106 "Posted Gudfood Order"
                 {
 
                 }
-                field("Posting Date"; Rec."Posting Date")
-                {
-
-                }
                 field("Date Created"; Rec."Date Created")
                 {
 
@@ -44,12 +50,6 @@ page 50106 "Posted Gudfood Order"
                 {
 
                 }
-            }
-            part("Sales Line"; "Posted Gudfood Order Subpage")
-            {
-                SubPageLink = "Order No." = field("No.");
-                CaptionML = ENU = 'Gudfood Sales Line', UKR = 'Гудфуд Лінії Продаж';
-
             }
         }
     }

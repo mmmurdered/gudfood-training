@@ -1,7 +1,6 @@
-table 50100 GudfoodItem
+table 50100 "Gudfood Item"
 {
     CaptionML = UKR = 'Гудфуд товар', ENU = 'Goodfud Item';
-    TableType = Normal;
 
     fields
     {
@@ -32,14 +31,14 @@ table 50100 GudfoodItem
         {
             CaptionML = UKR = 'Кількість замовлених', ENU = 'Quantity Ordered';
             FieldClass = FlowField;
-            CalcFormula = sum(PostedGudfoodOrderline.Quantity where("Item No." = field(Code)));
+            CalcFormula = sum("Posted Gudfood Order Line".Quantity where("Item No." = field(Code)));
         }
 
         field(41; "Qty. in Order"; Decimal)
         {
             CaptionML = UKR = 'Кількість активних замовлень', ENU = 'Quantity in Order';
             FieldClass = FlowField;
-            CalcFormula = sum(GudfoodOrderLine.Quantity where("Item No." = field(Code)));
+            CalcFormula = sum("Gudfood Order Line".Quantity where("Item No." = field(Code)));
         }
 
         field(50; "Shelf Life"; Date)
@@ -63,11 +62,10 @@ table 50100 GudfoodItem
         }
     }
 
+    trigger OnInsert()
     var
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
         NoSeriesMgt: Codeunit "NoSeriesManagement";
-
-    trigger OnInsert()
     begin
         if Rec.Code = '' then begin
             SalesReceivablesSetup.GET;
@@ -77,13 +75,11 @@ table 50100 GudfoodItem
 
     trigger OnDelete()
     var
-        GudfoodOrderLine: Record GudfoodOrderLine;
+        GudfoodOrderLine: Record "Gudfood Order Line";
         ErrorWhileDeleting: Label 'Cannot delete, item is on open orders';
     begin
         GudfoodOrderLine.SetRange("Item No.", Rec.Code);
-        if (GudfoodOrderLine.FindSet()) then
+        if not GudfoodOrderLine.IsEmpty then
             Error(ErrorWhileDeleting);
-
-        GudfoodOrderLine.DeleteAll(true);
     end;
 }

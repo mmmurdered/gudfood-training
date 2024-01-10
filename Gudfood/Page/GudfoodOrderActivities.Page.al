@@ -1,9 +1,9 @@
-page 50108 GudfoodOrderActivities
+page 50108 "Gudfood Order Activities"
 {
+    CaptionML = ENU = 'Gudfood Order Activities', UKR = 'Активності Замовлень Гудфуд';
     PageType = CardPart;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = GudfoodSalesOrderCue;
+    SourceTable = "Gudfood Sales Order Cue";
 
     layout
     {
@@ -17,7 +17,7 @@ page 50108 GudfoodOrderActivities
 
                     trigger OnDrillDown()
                     var
-                        GudfoodOrderList: Page GudfoodOrderList;
+                        GudfoodOrderList: Page "Gudfood Order List";
                     begin
                         GudfoodOrderList.Run();
                     end;
@@ -27,7 +27,7 @@ page 50108 GudfoodOrderActivities
                     ApplicationArea = All;
                     trigger OnDrillDown()
                     var
-                        GudfoodPostedOrders: Page PostedGudfoodOrder;
+                        GudfoodPostedOrders: Page "Posted Gudfood Order List";
                     begin
                         GudfoodPostedOrders.Run();
                     end;
@@ -37,7 +37,7 @@ page 50108 GudfoodOrderActivities
                     ApplicationArea = All;
                     trigger OnDrillDown()
                     var
-                        GudfoodItemList: Page GudfoodItemList;
+                        GudfoodItemList: Page "Gudfood Item List";
                     begin
                         GudfoodItemList.Run();
                     end;
