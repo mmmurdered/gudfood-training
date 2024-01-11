@@ -12,7 +12,6 @@ table 50101 "Gudfood Order Header"
         {
             CaptionML = UKR = 'Продано клієнту за номером', ENU = 'Sell to Customer No.';
             TableRelation = Customer;
-            NotBlank = true;
             trigger OnValidate()
             var
                 Customer: Record Customer;
@@ -83,7 +82,7 @@ table 50101 "Gudfood Order Header"
         GudfoodOrderLine: Record "Gudfood Order Line";
     begin
         GudfoodOrderLine.SetFilter("Order No.", Rec."No.");
-        if GudfoodOrderLine.FindSet(true) then
-            GudfoodOrderLine.DeleteAll(true);
+        if GudfoodOrderLine.FindSet() then
+            GudfoodOrderLine.DeleteAll();
     end;
 }

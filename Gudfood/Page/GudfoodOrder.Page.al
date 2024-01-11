@@ -78,7 +78,6 @@ page 50104 "Gudfood Order"
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 Image = Report;
-
                 RunObject = codeunit "Gudfood Report Run";
             }
             action(ExportOrder)

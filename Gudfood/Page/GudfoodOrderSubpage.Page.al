@@ -15,7 +15,6 @@ page 50103 "Gudfood Order Subpage"
                 field("Order No."; Rec."Order No.")
                 {
                     Visible = false;
-
                 }
                 field("Line No."; Rec."Line No.")
                 {

@@ -7,7 +7,7 @@ table 50102 "Gudfood Order Line"
         field(1; "Order No."; Code[20])
         {
             CaptionML = UKR = 'Номер замовлення', ENU = 'Order No.';
-            TableRelation = "Gudfood Order Header";
+            //TableRelation = "Gudfood Order Header"; BECAUSE OF ERROR, QUESTION ON MEETING!!!
         }
         field(2; "Line No."; Integer)
         {
