@@ -12,34 +12,29 @@ codeunit 50100 "Gudfood Order Post"
         PostedGudfoodOrderLine: Record "Posted Gudfood Order Line";
         GudfoodOrderLine: Record "Gudfood Order Line";
         PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
-        GudfoodOrderHeader: Record "Gudfood Order Header";
         ConfirmationMessage: Label 'Are you sure to post resords?';
         SuccessfullyPostedOrderMessage: Label 'The order has been successfully posted';
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
-            if GudfoodOrder."No." <> '' then begin
-                GudfoodOrderHeader.GET(GudfoodOrder."No.");
-
-                PostedGudfoodOrderHeader.INIT;
-                PostedGudfoodOrderHeader.TRANSFERFIELDS(GudfoodOrderHeader, TRUE);
-                PostedGudfoodOrderHeader."No." := GudfoodOrderHeader."Posting No.";
+            if GudfoodOrder.Get(GudfoodOrder."No.") then begin
+                PostedGudfoodOrderHeader.Init();
+                PostedGudfoodOrderHeader.TransferFields(GudfoodOrder, true);
+                PostedGudfoodOrderHeader."No." := GudfoodOrder."Posting No.";
                 PostedGudfoodOrderHeader."Posting Date" := Today;
-                PostedGudfoodOrderHeader.INSERT(TRUE);
+                PostedGudfoodOrderHeader.Insert(true);
 
-                if (GudfoodOrderLine.FINDSET) then begin
-                    GudfoodOrderLine.SetRange("Order No.", GudfoodOrder."No.");
-                    GudfoodOrderLine.FINDSET();
-                    PostedGudfoodOrderLine.INIT;
-                    REPEAT
-                        PostedGudfoodOrderLine.TRANSFERFIELDS(GudfoodOrderLine, TRUE);
-                        PostedGudfoodOrderLine."Order No." := GudfoodOrderHeader."Posting No.";
+                GudfoodOrderLine.SetRange("Order No.", GudfoodOrder."No.");
+                if (GudfoodOrderLine.FindSet()) then begin
+                    repeat
+                        PostedGudfoodOrderLine.Init();
+                        PostedGudfoodOrderLine.TransferFields(GudfoodOrderLine, true);
+                        PostedGudfoodOrderLine."Order No." := GudfoodOrder."Posting No.";
                         PostedGudfoodOrderLine."Date Created" := Today;
-                        PostedGudfoodOrderLine.INSERT(TRUE);
-                    UNTIL GudfoodOrderLine.NEXT = 0;
+                        PostedGudfoodOrderLine.Insert(true);
+                    until GudfoodOrderLine.Next = 0;
                 end;
 
-                GudfoodOrderHeader.DELETE(TRUE);
-                GudfoodOrderLine.DeleteAll(TRUE);
+                GudfoodOrder.Delete(true);
             end;
             Message(SuccessfullyPostedOrderMessage);
         end;

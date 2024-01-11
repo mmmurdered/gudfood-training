@@ -15,7 +15,7 @@ page 50110 "Gudfood Headline"
                     ApplicationArea = All;
 
                 }
-                field(TotalSales; GudfoodHeadlineText.GetMaxTotalAmount())
+                field(TotalSales; GetMaxTotalAmount())
                 {
                     ApplicationArea = All;
 
@@ -23,6 +23,13 @@ page 50110 "Gudfood Headline"
             }
         }
     }
+
+    local procedure GetMaxTotalAmount(): Text[250]
     var
-        GudfoodHeadlineText: Codeunit "Gudfood Managment Codeunit";
+        PostedGudfoodOrders: Record "Posted Gudfood Order Header";
+    begin
+        PostedGudfoodOrders.SetCurrentKey("Total Amount");
+        PostedGudfoodOrders.FindLast();
+        exit('Maximum total amount of order is: ' + Format(PostedGudfoodOrders."Total Amount"));
+    end;
 }

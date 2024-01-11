@@ -55,29 +55,9 @@ page 50101 "Gudfood Item Card"
         }
         area(FactBoxes)
         {
-            part(Picture; "Gudfood Item Picture")
+            part(Picture; "Gudfood Item Picture FB")
             {
                 SubPageLink = Code = field(Code);
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ImportPicture)
-            {
-                CaptionML = ENU = 'Import Picture', UKR = 'Імпортувати зображення';
-                Image = Picture;
-                ToolTipML = ENU = 'Import a picture file.', UKR = 'Імпорт файлу зображення';
-
-                trigger OnAction()
-                var
-                    ImportPicture: Codeunit "Gudfood Managment Codeunit";
-                begin
-                    ImportPicture.ImportFromDevice(Rec);
-                end;
             }
         }
     }

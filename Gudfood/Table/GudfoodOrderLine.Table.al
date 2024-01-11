@@ -13,7 +13,6 @@ table 50102 "Gudfood Order Line"
         {
             CaptionML = UKR = 'Номер рядку', ENU = 'Line No.';
             Editable = false;
-            AutoIncrement = true;
         }
         field(10; "Sell- to Customer No."; Code[20])
         {
@@ -39,14 +38,13 @@ table 50102 "Gudfood Order Line"
                 NotFoundMessage: Label 'Not found specified gudfood item';
                 ShelfDateExpired: Label 'Shelf date is expired, please choose another item';
             begin
-                GudfoodItem.Get("Item No.");
-                if GudfoodItem."Shelf Life" < Today then
-                    Message(ShelfDateExpired);
-                GudfoodItem.Get("Item No.");
-                Description := GudfoodItem.Description;
-                "Unit Price" := GudfoodItem."Unit Price";
-                "Item Type" := GudfoodItem.Type;
-                Amount := Quantity * "Unit Price";
+                if GudfoodItem.Get("Item No.") then begin
+                    if GudfoodItem."Shelf Life" < Today then
+                        Message(ShelfDateExpired);
+                    Description := GudfoodItem.Description;
+                    "Unit Price" := GudfoodItem."Unit Price";
+                    "Item Type" := GudfoodItem.Type;
+                end;
             end;
         }
         field(31; "Item Type"; Option)
@@ -69,7 +67,7 @@ table 50102 "Gudfood Order Line"
             NotBlank = true;
             trigger OnValidate()
             begin
-                GudfoodManagment.UpdateAmount(Rec);
+                UpdateAmount();
             end;
         }
         field(60; "Unit Price"; Decimal)
@@ -78,7 +76,7 @@ table 50102 "Gudfood Order Line"
 
             trigger OnValidate()
             begin
-                GudfoodManagment.UpdateAmount(Rec);
+                UpdateAmount();
             end;
         }
         field(70; Amount; Decimal)
@@ -99,13 +97,14 @@ table 50102 "Gudfood Order Line"
     var
         GudfoodItem: Record "Gudfood Item";
         GudfoodOrderHeader: Record "Gudfood Order Header";
-        GudfoodManagment: Codeunit "Gudfood Managment Codeunit";
 
     trigger OnInsert();
     begin
-        GudfoodOrderHeader.Get("Order No.");
-        "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
-        "Date Created" := GudfoodOrderHeader."Date Created";
+        if GudfoodOrderHeader.Get("Order No.") then begin
+            "Order No." := GudfoodOrderHeader."No.";
+            "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
+            "Date Created" := GudfoodOrderHeader."Date Created";
+        end;
     end;
 
     local procedure UpdateAmount()

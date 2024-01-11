@@ -28,12 +28,12 @@ table 50103 "Posted Gudfood Order Header"
 
         field(30; "Posting No."; Code[20])
         {
-            CaptionML = UKR = 'Пост номер', ENU = 'Posting No.';
+            CaptionML = UKR = 'Обліковий номер', ENU = 'Posting No.';
             Editable = false;
         }
         field(31; "Posting Date"; Date)
         {
-            CaptionML = UKR = 'Дата постингу', ENU = 'Posting Date';
+            CaptionML = UKR = 'Дата обліку', ENU = 'Posting Date';
             Editable = false;
         }
         field(40; "Date Created"; Date)

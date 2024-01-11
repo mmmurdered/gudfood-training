@@ -11,22 +11,20 @@ table 50101 "Gudfood Order Header"
         field(10; "Sell-to Customer No."; Code[20])
         {
             CaptionML = UKR = 'Продано клієнту за номером', ENU = 'Sell to Customer No.';
-            TableRelation = Customer."No.";
-
+            TableRelation = Customer;
+            NotBlank = true;
             trigger OnValidate()
             var
                 Customer: Record Customer;
             begin
-
-                if "Sell-to Customer No." <> '' then begin
-                    Customer.get("Sell-to Customer No.");
+                if Customer.Get("Sell-to Customer No.") then
                     "Sell-to Customer Name" := Customer.Name;
-                end;
             end;
         }
         field(11; "Sell-to Customer Name"; Text[100])
         {
             CaptionML = UKR = 'Продано клієнту за Іменем', ENU = 'Sell-to Customer Name';
+            Editable = false;
         }
         field(20; "Order Date"; Date)
         {
@@ -85,8 +83,7 @@ table 50101 "Gudfood Order Header"
         GudfoodOrderLine: Record "Gudfood Order Line";
     begin
         GudfoodOrderLine.SetFilter("Order No.", Rec."No.");
-        if GudfoodOrderLine.FindSet(true) then begin
+        if GudfoodOrderLine.FindSet(true) then
             GudfoodOrderLine.DeleteAll(true);
-        end;
     end;
 }

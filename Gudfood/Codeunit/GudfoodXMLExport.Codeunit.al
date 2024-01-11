@@ -12,7 +12,6 @@ codeunit 50104 "Gudfood XML Export"
         GudfoodOrderExport: XmlPort "Gudfood Order Export";
         GudfoodOrderLine: Record "Gudfood Order Line";
     begin
-        GudfoodOrderHeader.SetCurrentKey("No.");
         GudfoodOrderHeader.SetRange("No.", GudfoodOrderHeader."No.");
         GudfoodOrderExport.SetTableView(GudfoodOrderHeader);
         GudfoodOrderExport.Run();

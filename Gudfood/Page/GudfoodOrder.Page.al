@@ -20,6 +20,7 @@ page 50104 "Gudfood Order"
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
                     ToolTipML = ENU = 'Specified Customer sell to of the Order', UKR = 'Вказаний клієнт замовлення';
+                    ShowMandatory = true;
                 }
                 field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {

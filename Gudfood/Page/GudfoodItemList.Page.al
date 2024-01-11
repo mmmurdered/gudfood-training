@@ -49,7 +49,7 @@ page 50100 "Gudfood Item List"
         }
         area(FactBoxes)
         {
-            part(Picture; "Gudfood Item Picture")
+            part(Picture; "Gudfood Item Picture FB")
             {
                 SubPageLink = Code = field(Code);
             }

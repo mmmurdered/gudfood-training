@@ -32,7 +32,6 @@ report 50100 "Gudfood Order Report"
             dataitem(GudfoodOrderLine; "Gudfood Order Line")
             {
                 DataItemLink = "Order No." = field("No.");
-
                 column(Item_No_; "Item No.")
                 {
                     IncludeCaption = true;
