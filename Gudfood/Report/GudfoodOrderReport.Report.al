@@ -9,9 +9,9 @@ report 50100 "Gudfood Order Report"
     {
         dataitem(GudfoodOrderHeader; "Gudfood Order Header")
         {
-            column(Date_Created; "Date Created")
+            column(Date_Created; GetDateFormat("Date Created"))
             {
-                IncludeCaption = true;
+
             }
             column(Sell_to_Customer_No_; "Sell-to Customer No.")
             {
@@ -72,4 +72,16 @@ report 50100 "Gudfood Order Report"
             LayoutFile = 'RDLReport.rdl';
         }
     }
+    local procedure GetDateFormat(DateToConvert: Date) RetDate: Text
+    var
+        LocMgt: Codeunit Language;
+    begin
+        if DateToConvert <> 0D then begin
+            RetDate := Format(DateToConvert);
+            exit(RetDate);
+        end else begin
+            RetDate := ' ';
+            exit(RetDate);
+        end;
+    end;
 }

@@ -6,7 +6,11 @@ table 50101 "Gudfood Order Header"
     {
         field(1; "No."; Code[20])
         {
-            CaptionML = UKR = 'Номер Замовлення', ENU = 'Order Number';
+            CaptionML = UKR = 'Номер', ENU = 'No.';
+        }
+        field(2; "Posting No."; Code[20])
+        {
+            CaptionML = UKR = 'Облікований номер', ENU = 'Posting No.';
         }
         field(10; "Sell-to Customer No."; Code[20])
         {
@@ -17,7 +21,9 @@ table 50101 "Gudfood Order Header"
                 Customer: Record Customer;
             begin
                 if Customer.Get("Sell-to Customer No.") then
-                    "Sell-to Customer Name" := Customer.Name;
+                    "Sell-to Customer Name" := Customer.Name
+                else
+                    "Sell-to Customer Name" := '';
             end;
         }
         field(11; "Sell-to Customer Name"; Text[100])
@@ -29,18 +35,13 @@ table 50101 "Gudfood Order Header"
         {
             CaptionML = UKR = 'Дата замовлення', ENU = 'Order Date';
         }
-
-        field(30; "Posting No."; Code[20])
-        {
-            CaptionML = UKR = 'Пост номер', ENU = 'Posting No.';
-        }
-        field(40; "Date Created"; Date)
+        field(30; "Date Created"; Date)
         {
             CaptionML = UKR = 'Дата створення', ENU = 'Date Created';
             Editable = false;
         }
 
-        field(50; "Total Qty"; Decimal)
+        field(40; "Total Qty"; Decimal)
         {
             CaptionML = UKR = 'Загальна кількість', ENU = 'Total Quantity';
             Editable = false;
@@ -48,7 +49,7 @@ table 50101 "Gudfood Order Header"
             CalcFormula = sum("Gudfood Order Line".Quantity where("Order No." = field("No.")));
         }
 
-        field(51; "Total Amount"; Decimal)
+        field(41; "Total Amount"; Decimal)
         {
             CaptionML = UKR = 'Загальна сума', ENU = 'Total Amount';
             Editable = false;
@@ -68,13 +69,19 @@ table 50101 "Gudfood Order Header"
     trigger OnInsert()
     var
         NoSeriesMgt: Codeunit NoSeriesManagement;
+        SalesReceivablesSetup: Record "Sales & Receivables Setup";
     begin
+        SalesReceivablesSetup.Get();
         Rec."Date Created" := Today;
-        if "No." = '' then
-            Rec."No." := NoSeriesMgt.GetNextNo('FUD-ORD', Today, true);
+        if "No." = '' then begin
+            SalesReceivablesSetup.TestField(SalesReceivablesSetup."Gudfood Order Nos.");
+            Rec."No." := NoSeriesMgt.GetNextNo(SalesReceivablesSetup."Gudfood Order Nos.", Today, true);
+        end;
 
-        if "Posting No." = '' then
-            Rec."Posting No." := NoSeriesMgt.GetNextNo('FUD-PSTD', Today, true);
+        if "Posting No." = '' then begin
+            SalesReceivablesSetup.TestField(SalesReceivablesSetup."Gudfood Posted Order Nos.");
+            Rec."Posting No." := NoSeriesMgt.GetNextNo(SalesReceivablesSetup."Gudfood Posted Order Nos.", Today, true);
+        end;
     end;
 
     trigger OnDelete()
@@ -83,6 +90,6 @@ table 50101 "Gudfood Order Header"
     begin
         GudfoodOrderLine.SetFilter("Order No.", Rec."No.");
         if GudfoodOrderLine.FindSet() then
-            GudfoodOrderLine.DeleteAll();
+            GudfoodOrderLine.DeleteAll(false);
     end;
 }

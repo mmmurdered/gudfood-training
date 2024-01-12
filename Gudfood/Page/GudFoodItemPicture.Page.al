@@ -9,7 +9,7 @@ page 50102 "Gudfood Item Picture FB"
     {
         area(Content)
         {
-            field(Picture; Rec.Picture)
+            field("Gudfood Item Picture"; Rec.Picture)
             {
                 ToolTipML = ENU = 'Picture of the item', UKR = 'Зображення товару';
             }
@@ -30,25 +30,35 @@ page 50102 "Gudfood Item Picture FB"
                     ImportFromDevice(Rec);
                 end;
             }
+            action(RemovePicture)
+            {
+                Image = Delete;
+                CaptionML = ENU = 'Delete Picture', UKR = 'Видалити зображення';
+
+                trigger OnAction()
+                begin
+                    Clear(Rec.Picture);
+                    Rec.Modify();
+                end;
+            }
         }
     }
 
-    local procedure ImportFromDevice(GudfoodItem: Record "Gudfood Item")
+    local procedure ImportFromDevice(var GudfoodItem: Record "Gudfood Item")
     var
         FileManagement: Codeunit "File Management";
         FileName: Text;
         ClientFileName: Text;
         InStr: InStream;
         SelectPictureLabel: Label 'Select item image: ';
+        EmptyNameError: Label 'Error, empty name of file';
     begin
-        GudfoodItem.Find();
-        GudfoodItem.TestField(Code);
         ClientFileName := '';
         UploadIntoStream(SelectPictureLabel, '', '', ClientFileName, InStr);
         if ClientFileName <> '' then
             FileName := FileManagement.GetFileName(ClientFileName);
         if FileName = '' then
-            Error('');
+            Error(EmptyNameError);
         Clear(GudfoodItem.Picture);
         GudfoodItem.Picture.ImportStream(InStr, FileName);
         GudfoodItem.Modify(true);

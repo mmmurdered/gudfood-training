@@ -12,6 +12,10 @@ page 50106 "Posted Gudfood Order"
         {
             group(Header)
             {
+                field("No."; Rec."No.")
+                {
+
+                }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
 
@@ -21,10 +25,6 @@ page 50106 "Posted Gudfood Order"
 
                 }
                 field("Order Date"; Rec."Order Date")
-                {
-
-                }
-                field("Posting No."; Rec."Posting No.")
                 {
 
                 }
@@ -45,11 +45,10 @@ page 50106 "Posted Gudfood Order"
 
                 }
             }
-            part("Sales Line"; "Posted Gudfood Order Subpage")
+            part("Gudfood Order Line"; "Posted Gudfood Order Subpage")
             {
                 SubPageLink = "Order No." = field("No.");
                 CaptionML = ENU = 'Gudfood Sales Line', UKR = 'Гудфуд Лінії Продаж';
-
             }
         }
     }

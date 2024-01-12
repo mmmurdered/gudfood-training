@@ -28,12 +28,12 @@ page 50104 "Gudfood Order"
                 }
                 field("Order Date"; Rec."Order Date")
                 {
-                    ToolTipML = ENU = 'Specified Order Date', UKR = 'Введіть Дату замовлення';
+                    ToolTipML = ENU = 'Specified Order Date', UKR = 'Вказана Дату замовлення';
                 }
                 field("Posting No."; Rec."Posting No.")
                 {
                     ToolTipML = ENU = 'Specified No of the Posted Order, can be generated automatically',
-                    UKR = 'Введіть номер публікації замовлення вручну, або воно буде присвоєно автоматично';
+                    UKR = 'Номер публікації замовлення, може бути присвоєно автоматично';
                 }
                 field("Date Created"; Rec."Date Created")
                 {
@@ -78,7 +78,11 @@ page 50104 "Gudfood Order"
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 Image = Report;
-                RunObject = codeunit "Gudfood Report Run";
+                trigger OnAction()
+                begin
+                    CurrPage.SetSelectionFilter(GudfoodOrderHeader);
+                    Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
+                end;
             }
             action(ExportOrder)
             {
@@ -87,8 +91,14 @@ page 50104 "Gudfood Order"
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 Image = XMLFile;
-                RunObject = codeunit "Gudfood XML Export";
+                trigger OnAction()
+                begin
+                    CurrPage.SetSelectionFilter(GudfoodOrderHeader);
+                    Xmlport.Run(Xmlport::"Gudfood Order Export", true, false, Rec);
+                end;
             }
         }
     }
+    var
+        GudfoodOrderHeader: Record "Gudfood Order Header";
 }

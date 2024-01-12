@@ -12,19 +12,7 @@ page 50105 "Posted Gudfood Order Subpage"
         {
             repeater(Group)
             {
-                field("Order No."; Rec."Order No.")
-                {
-
-                }
                 field("Line No."; Rec."Line No.")
-                {
-
-                }
-                field("Sell-to Customer No."; Rec."Sell- to Customer No.")
-                {
-
-                }
-                field("Date Created"; Rec."Date Created")
                 {
 
                 }

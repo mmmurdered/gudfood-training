@@ -26,10 +26,9 @@ table 50104 "Posted Gudfood Order Line"
             CaptionML = UKR = 'Номер товару', ENU = 'Item No.';
             TableRelation = "Gudfood Item".Code where(Code = field("Item No."));
         }
-        field(31; "Item Type"; Option)
+        field(31; "Item Type"; Enum "Gudfood Item Type")
         {
             CaptionML = UKR = 'Тип товару', ENU = 'Item Type';
-            OptionMembers = " ","Salat","Burger","Capcake","Drink";
             FieldClass = FlowField;
             CalcFormula = lookup("Gudfood Item".Type where(Code = field("Item No.")));
         }

@@ -21,10 +21,9 @@ table 50100 "Gudfood Item"
 
         }
 
-        field(30; Type; Option)
+        field(30; Type; Enum "Gudfood Item Type")
         {
             CaptionML = UKR = 'Тип товару', ENU = 'Item Type';
-            OptionMembers = " ","Salat","Burger","Capcake","Drink";
         }
 
         field(40; "Qty. Ordered"; Decimal)
@@ -47,7 +46,7 @@ table 50100 "Gudfood Item"
 
         }
 
-        field(60; Picture; MediaSet)
+        field(60; Picture; Media)
         {
             CaptionML = UKR = 'Зображення', ENU = 'Picture';
         }
@@ -67,9 +66,10 @@ table 50100 "Gudfood Item"
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
         NoSeriesMgt: Codeunit "NoSeriesManagement";
     begin
+        SalesReceivablesSetup.Get();
         if Rec.Code = '' then begin
-            SalesReceivablesSetup.GET;
-            Rec.Code := NoSeriesMgt.GetNextNo('FUD', Today, true);
+            SalesReceivablesSetup.TestField(SalesReceivablesSetup."Gudfood Item Nos.");
+            Rec.Code := NoSeriesMgt.GetNextNo(SalesReceivablesSetup."Gudfood Item Nos.", Today, true);
         end;
     end;
 

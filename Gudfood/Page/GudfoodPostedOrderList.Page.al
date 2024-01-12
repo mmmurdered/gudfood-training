@@ -14,7 +14,7 @@ page 50111 "Posted Gudfood Order List"
         {
             repeater("Posted Orders")
             {
-                field("Posted No."; Rec."Posting No.")
+                field("No."; Rec."No.")
                 {
 
                 }
@@ -31,10 +31,6 @@ page 50111 "Posted Gudfood Order List"
 
                 }
                 field("Order Date"; Rec."Order Date")
-                {
-
-                }
-                field("Posting No."; Rec."Posting No.")
                 {
 
                 }

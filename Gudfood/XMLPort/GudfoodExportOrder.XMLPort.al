@@ -10,6 +10,7 @@ xmlport 50100 "Gudfood Order Export"
         {
             tableelement(GudfoodOrderHeader; "Gudfood Order Header")
             {
+                RequestFilterFields = "No.";
                 fieldelement(No; GudfoodOrderHeader."No.")
                 {
 

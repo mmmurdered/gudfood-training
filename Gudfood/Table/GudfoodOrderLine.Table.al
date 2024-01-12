@@ -7,7 +7,7 @@ table 50102 "Gudfood Order Line"
         field(1; "Order No."; Code[20])
         {
             CaptionML = UKR = 'Номер замовлення', ENU = 'Order No.';
-            //TableRelation = "Gudfood Order Header"; BECAUSE OF ERROR, QUESTION ON MEETING!!!
+            TableRelation = "Gudfood Order Header";
         }
         field(2; "Line No."; Integer)
         {
@@ -31,7 +31,6 @@ table 50102 "Gudfood Order Line"
         {
             CaptionML = UKR = 'Номер товару', ENU = 'Item No.';
             TableRelation = "Gudfood Item".Code;
-            NotBlank = true;
 
             trigger OnValidate()
             var
@@ -41,16 +40,19 @@ table 50102 "Gudfood Order Line"
                 if GudfoodItem.Get("Item No.") then begin
                     if GudfoodItem."Shelf Life" < Today then
                         Message(ShelfDateExpired);
-                    Description := GudfoodItem.Description;
-                    "Unit Price" := GudfoodItem."Unit Price";
-                    "Item Type" := GudfoodItem.Type;
+                    Rec.Description := GudfoodItem.Description;
+                    Rec.Validate("Unit Price", GudfoodItem."Unit Price");
+                    Rec."Item Type" := GudfoodItem.Type;
+                end else begin
+                    Rec.Description := '';
+                    Rec."Unit Price" := 0;
+                    Clear(Rec."Item Type");
                 end;
             end;
         }
-        field(31; "Item Type"; Option)
+        field(31; "Item Type"; Enum "Gudfood Item Type")
         {
             CaptionML = UKR = 'Тип товару', ENU = 'Item Type';
-            OptionMembers = " ","Salat","Burger","Capcake","Drink";
             FieldClass = FlowField;
             CalcFormula = lookup("Gudfood Item".Type where(Code = field("Item No.")));
         }
@@ -94,21 +96,21 @@ table 50102 "Gudfood Order Line"
         }
     }
 
-    var
-        GudfoodItem: Record "Gudfood Item";
-        GudfoodOrderHeader: Record "Gudfood Order Header";
-
     trigger OnInsert();
     begin
         if GudfoodOrderHeader.Get("Order No.") then begin
-            "Order No." := GudfoodOrderHeader."No.";
-            "Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
-            "Date Created" := GudfoodOrderHeader."Date Created";
+            Rec."Order No." := GudfoodOrderHeader."No.";
+            Rec."Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
+            Rec."Date Created" := GudfoodOrderHeader."Date Created";
         end;
     end;
 
     local procedure UpdateAmount()
     begin
-        Amount := Quantity * "Unit Price";
+        Rec.Amount := Rec.Quantity * Rec."Unit Price";
     end;
+
+    var
+        GudfoodItem: Record "Gudfood Item";
+        GudfoodOrderHeader: Record "Gudfood Order Header";
 }

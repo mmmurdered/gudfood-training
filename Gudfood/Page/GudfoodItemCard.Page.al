@@ -25,8 +25,6 @@ page 50101 "Gudfood Item Card"
                 field(Type; Rec.Type)
                 {
                     ToolTipML = ENU = 'Specified type of the item', UKR = 'Вказаний тип товару';
-                    ShowMandatory = true;
-                    NotBlank = true;
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {
@@ -55,7 +53,7 @@ page 50101 "Gudfood Item Card"
         }
         area(FactBoxes)
         {
-            part(Picture; "Gudfood Item Picture FB")
+            part("Picture Of Item"; "Gudfood Item Picture FB")
             {
                 SubPageLink = Code = field(Code);
             }
