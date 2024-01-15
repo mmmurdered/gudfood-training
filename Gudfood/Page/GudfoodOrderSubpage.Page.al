@@ -1,6 +1,6 @@
 page 50103 "Gudfood Order Subpage"
 {
-    CaptionML = ENU = 'Gudfood Order Subpage', UKR = 'Гудфуд Підсторінка Замовлення';
+    CaptionML = ENU = 'Gudfood Order Lines', UKR = 'Гудфуд Підсторінка Замовлення';
     PageType = ListPart;
     ApplicationArea = All;
     SourceTable = "Gudfood Order Line";
