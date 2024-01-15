@@ -6,6 +6,7 @@ page 50100 "Gudfood Item List"
     PageType = List;
     SourceTable = "Gudfood Item";
     ApplicationArea = All;
+    Editable = false;
 
     layout
     {
