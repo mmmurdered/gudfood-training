@@ -44,8 +44,8 @@ table 50102 "Gudfood Order Line"
                     Rec.Validate("Unit Price", GudfoodItem."Unit Price");
                     Rec."Item Type" := GudfoodItem.Type;
                 end else begin
-                    Rec.Description := '';
-                    Rec."Unit Price" := 0;
+                    Rec.Validate("Unit Price", 0);
+                    Clear(Rec.Description);
                     Clear(Rec."Item Type");
                 end;
             end;
@@ -99,7 +99,6 @@ table 50102 "Gudfood Order Line"
     trigger OnInsert();
     begin
         if GudfoodOrderHeader.Get("Order No.") then begin
-            Rec."Order No." := GudfoodOrderHeader."No.";
             Rec."Sell- to Customer No." := GudfoodOrderHeader."Sell-to Customer No.";
             Rec."Date Created" := GudfoodOrderHeader."Date Created";
         end;

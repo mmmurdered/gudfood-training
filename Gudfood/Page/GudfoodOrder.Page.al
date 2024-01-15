@@ -48,7 +48,7 @@ page 50104 "Gudfood Order"
                     ToolTipML = ENU = 'Specified Amount of Order', UKR = 'Вказана загальна сума замовлення';
                 }
             }
-            part(SalesLine; "Gudfood Order Subpage")
+            part(GudfoodOrderLine; "Gudfood Order Subpage")
             {
                 UpdatePropagation = Both;
                 SubPageLink = "Order No." = field("No.");
@@ -79,6 +79,8 @@ page 50104 "Gudfood Order"
                 PromotedOnly = true;
                 Image = Report;
                 trigger OnAction()
+                var
+                    GudfoodOrderHeader: Record "Gudfood Order Header";
                 begin
                     CurrPage.SetSelectionFilter(GudfoodOrderHeader);
                     Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
@@ -92,6 +94,8 @@ page 50104 "Gudfood Order"
                 PromotedOnly = true;
                 Image = XMLFile;
                 trigger OnAction()
+                var
+                    GudfoodOrderHeader: Record "Gudfood Order Header";
                 begin
                     CurrPage.SetSelectionFilter(GudfoodOrderHeader);
                     Xmlport.Run(Xmlport::"Gudfood Order Export", true, false, Rec);
@@ -99,6 +103,4 @@ page 50104 "Gudfood Order"
             }
         }
     }
-    var
-        GudfoodOrderHeader: Record "Gudfood Order Header";
 }

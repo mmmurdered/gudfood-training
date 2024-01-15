@@ -61,6 +61,6 @@ page 50102 "Gudfood Item Picture FB"
             Error(EmptyNameError);
         Clear(GudfoodItem.Picture);
         GudfoodItem.Picture.ImportStream(InStr, FileName);
-        GudfoodItem.Modify(true);
+        GudfoodItem.Modify();
     end;
 }

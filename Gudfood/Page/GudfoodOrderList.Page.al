@@ -6,6 +6,7 @@ page 50107 "Gudfood Order List"
     SourceTable = "Gudfood Order Header";
     CardPageId = "Gudfood Order";
     ApplicationArea = All;
+    Editable = false;
 
     layout
     {
@@ -13,6 +14,10 @@ page 50107 "Gudfood Order List"
         {
             repeater("Order Header")
             {
+                field("No."; Rec."No.")
+                {
+
+                }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
                 }

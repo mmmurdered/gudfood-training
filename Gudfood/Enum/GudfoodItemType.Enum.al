@@ -2,7 +2,7 @@ enum 50100 "Gudfood Item Type"
 {
     Extensible = true;
 
-    value(0; Blank)
+    value(0; " ")
     {
         Caption = ' ';
     }
