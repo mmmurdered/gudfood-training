@@ -1,6 +1,7 @@
 page 50107 "Gudfood Order List"
 {
-    CaptionML = ENU = 'Gudfood Order List', UKR = 'Гудфуд Список Замовлень';
+    //CaptionML = ENU = 'Gudfood Order List', UKR = 'Гудфуд Список Замовлень';
+    Caption = 'Gudfood Order List';
     PageType = List;
     UsageCategory = Lists;
     SourceTable = "Gudfood Order Header";
@@ -46,27 +47,51 @@ page 50107 "Gudfood Order List"
     {
         area(Processing)
         {
-            action(Post)
+            group(Posting)
             {
-                CaptionML = ENU = 'Post', UKR = 'Опублікувати';
-                Promoted = true;
-                PromotedIsBig = true;
-                PromotedOnly = true;
-                Image = Post;
-                RunObject = codeunit "Gudfood Order Post";
+                Caption = 'Posting';
+                action(Post)
+                {
+                    //CaptionML = ENU = 'Post', UKR = 'Опублікувати';
+                    Caption = 'Post';
+                    Image = Post;
+                    RunObject = codeunit "Gudfood Order Post";
+                }
             }
-            action(ExportOrder)
+        }
+        area(Reporting)
+        {
+            group(Export)
             {
-                CaptionML = ENU = 'Export to XML', UKR = 'Експортувати в XML';
-                Promoted = true;
-                PromotedIsBig = true;
-                PromotedOnly = true;
-                Image = XMLFile;
-                trigger OnAction()
-                begin
-                    CurrPage.SetSelectionFilter(Rec);
-                    Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
-                end;
+                Caption = 'Export';
+                action(ExportOrder)
+                {
+                    //CaptionML = ENU = 'Export to XML', UKR = 'Експортувати в XML';
+                    Caption = 'Export to XML';
+                    Image = XMLFile;
+                    trigger OnAction()
+                    begin
+                        CurrPage.SetSelectionFilter(Rec);
+                        Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
+                    end;
+                }
+            }
+            group(Reports)
+            {
+                Caption = 'Reports';
+                action(Report)
+                {
+                    //CaptionML = ENU = 'Print Report', UKR = 'Надрукувати звіт';
+                    Caption = 'Print Report';
+                    Image = Report;
+                    trigger OnAction()
+                    var
+                        GudfoodOrderHeader: Record "Gudfood Order Header";
+                    begin
+                        GudfoodOrderHeader.SetRange("No.", Rec."No.");
+                        Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
+                    end;
+                }
             }
         }
     }

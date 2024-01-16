@@ -1,6 +1,7 @@
 xmlport 50100 "Gudfood Order Export"
 {
-    CaptionML = ENU = 'Export Order to XML', UKR = 'Експортувати в XML файл';
+    //CaptionML = ENU = 'Export Order to XML', UKR = 'Експортувати в XML файл';
+    Caption = 'Export Order to XML';
     Format = Xml;
     Direction = Export;
 
@@ -10,7 +11,6 @@ xmlport 50100 "Gudfood Order Export"
         {
             tableelement(GudfoodOrderHeader; "Gudfood Order Header")
             {
-                RequestFilterFields = "No.";
                 fieldelement(No; GudfoodOrderHeader."No.")
                 {
 

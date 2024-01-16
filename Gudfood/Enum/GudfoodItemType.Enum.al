@@ -8,18 +8,18 @@ enum 50100 "Gudfood Item Type"
     }
     value(2; Salad)
     {
-        CaptionML = ENU = 'Salad', UKR = 'Салат';
+        Caption = 'Salad';
     }
     value(10; Burger)
     {
-        CaptionML = ENU = 'Burger', UKR = 'Бургер';
+        Caption = 'Burger';
     }
     value(20; Cupcake)
     {
-        CaptionML = ENU = 'Cupcake', UKR = 'Капкейк';
+        Caption = 'Cupcake';
     }
     value(30; Drink)
     {
-        CaptionML = ENU = 'Drink', UKR = 'Напій';
+        Caption = 'Drink';
     }
 }

@@ -1,6 +1,7 @@
 page 50105 "Posted Gudfood Order Subpage"
 {
-    CaptionML = ENU = 'Posted Gudfood Order Subpage', UKR = 'Опублікована Підсторінка Замовлення Гудфуд';
+    //CaptionML = ENU = 'Posted Gudfood Order Subpage', UKR = 'Опублікована Підсторінка Замовлення Гудфуд';
+    Caption = 'Posted Gudfood Order Subpage';
     PageType = ListPart;
     ApplicationArea = All;
     Editable = false;

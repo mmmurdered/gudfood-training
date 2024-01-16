@@ -1,6 +1,7 @@
 page 50111 "Posted Gudfood Order List"
 {
-    CaptionML = ENU = 'Posted Gudfood Order List', UKR = 'Опубліковані Гудфуд Замовлення';
+    //CaptionML = ENU = 'Posted Gudfood Order List', UKR = 'Опубліковані Гудфуд Замовлення';
+    Caption = 'Posted Gudfood Order List';
     PageType = List;
     UsageCategory = History;
     SourceTable = "Posted Gudfood Order Header";
@@ -45,6 +46,44 @@ page 50111 "Posted Gudfood Order List"
                 field("Total Amount"; Rec."Total Amount")
                 {
 
+                }
+            }
+        }
+    }
+    actions
+    {
+        area(Reporting)
+        {
+            group(Export)
+            {
+                Caption = 'Export';
+                action(ExportOrder)
+                {
+                    //CaptionML = ENU = 'Export to XML', UKR = 'Експортувати в XML';
+                    Caption = 'Export to XML';
+                    Image = XMLFile;
+                    trigger OnAction()
+                    begin
+                        CurrPage.SetSelectionFilter(Rec);
+                        Xmlport.Run(Xmlport::"Gudfood Posted Order Export", false, false, Rec);
+                    end;
+                }
+            }
+            group(Reports)
+            {
+                Caption = 'Reports';
+                action(Report)
+                {
+                    //CaptionML = ENU = 'Print Report', UKR = 'Надрукувати звіт';
+                    Caption = 'Print Report';
+                    Image = Report;
+                    trigger OnAction()
+                    var
+                        PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
+                    begin
+                        PostedGudfoodOrderHeader.SetRange("No.", Rec."No.");
+                        Report.Run(Report::"Gudfood Posted Order Report", true, false, PostedGudfoodOrderHeader);
+                    end;
                 }
             }
         }

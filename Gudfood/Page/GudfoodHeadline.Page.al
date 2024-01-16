@@ -1,6 +1,6 @@
 page 50110 "Gudfood Headline"
 {
-    CaptionML = ENU = 'Gudfood Headline', UKR = 'Заголовок Гудфуд';
+    Caption = 'Gudfood Headline';
     PageType = HeadlinePart;
     ApplicationArea = All;
 
@@ -10,7 +10,7 @@ page 50110 "Gudfood Headline"
         {
             group(General)
             {
-                field(Welcome; 'Welcome to Gudfood!')
+                field(Welcome; GetWelcomeText())
                 {
                     ApplicationArea = All;
 
@@ -27,9 +27,17 @@ page 50110 "Gudfood Headline"
     local procedure GetMaxTotalAmount(): Text[250]
     var
         PostedGudfoodOrders: Record "Posted Gudfood Order Header";
+        MaxAmountLabel: Label 'Maximum total amount of order is: ';
     begin
         PostedGudfoodOrders.SetCurrentKey("Total Amount");
         PostedGudfoodOrders.FindLast();
-        exit('Maximum total amount of order is: ' + Format(PostedGudfoodOrders."Total Amount"));
+        exit(MaxAmountLabel + Format(PostedGudfoodOrders."Total Amount"));
+    end;
+
+    local procedure GetWelcomeText(): Text[250]
+    var
+        WelcomeLabel: Label 'Welcome to Gudfood, ';
+    begin
+        exit(WelcomeLabel + UserId);
     end;
 }
