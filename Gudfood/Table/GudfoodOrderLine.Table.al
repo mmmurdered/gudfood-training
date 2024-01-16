@@ -1,32 +1,27 @@
 table 50102 "Gudfood Order Line"
 {
-    //CaptionML = UKR = 'Gudfood Рядок Замовлення', ENU = 'Gudfood Order Line';
     Caption = 'Gudfood Order Line';
 
     fields
     {
         field(1; "Order No."; Code[20])
         {
-            //CaptionML = UKR = 'Номер замовлення', ENU = 'Order No.';
             Caption = 'Order No.';
             TableRelation = "Gudfood Order Header";
         }
         field(2; "Line No."; Integer)
         {
-            // CaptionML = UKR = 'Номер рядку', ENU = 'Line No.';
             Caption = 'Line No.';
             Editable = false;
         }
         field(10; "Sell- to Customer No."; Code[20])
         {
-            //CaptionML = UKR = 'Номер клієнта', ENU = 'Sell- to Customer No.';
             Caption = 'Sell- to Customer No.';
             Editable = false;
             TableRelation = Customer;
         }
         field(20; "Date Created"; Date)
         {
-            //CaptionML = UKR = 'Дата створення', ENU = 'Date Created';
             Caption = 'Date Created';
             Editable = false;
             FieldClass = FlowField;
@@ -34,7 +29,6 @@ table 50102 "Gudfood Order Line"
         }
         field(30; "Item No."; Code[20])
         {
-            //CaptionML = UKR = 'Номер товару', ENU = 'Item No.';
             Caption = 'Item No.';
             TableRelation = "Gudfood Item".Code;
 
@@ -58,21 +52,18 @@ table 50102 "Gudfood Order Line"
         }
         field(31; "Item Type"; Enum "Gudfood Item Type")
         {
-            //CaptionML = UKR = 'Тип товару', ENU = 'Item Type';
             Caption = 'Item Type';
             FieldClass = FlowField;
             CalcFormula = lookup("Gudfood Item".Type where(Code = field("Item No.")));
         }
         field(40; Description; Text[100])
         {
-            //CaptionML = UKR = 'Опис товару', ENU = 'Description';
             Caption = 'Description';
             Editable = false;
 
         }
         field(50; Quantity; Decimal)
         {
-            //CaptionML = UKR = 'Кількість', ENU = 'Quantity';
             Caption = 'Quantity';
             MinValue = 0;
             NotBlank = true;
@@ -83,7 +74,6 @@ table 50102 "Gudfood Order Line"
         }
         field(60; "Unit Price"; Decimal)
         {
-            //CaptionML = UKR = 'Ціна за одиницю', ENU = 'Unit Price';
             Caption = 'Unit Price';
 
             trigger OnValidate()
@@ -93,7 +83,6 @@ table 50102 "Gudfood Order Line"
         }
         field(70; Amount; Decimal)
         {
-            //CaptionML = UKR = 'Сума', ENU = 'Amount';
             Caption = 'Amount';
             Editable = false;
         }

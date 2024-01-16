@@ -1,6 +1,5 @@
 report 50100 "Gudfood Order Report"
 {
-    //CaptionML = ENU = 'Gudfood Order Report', UKR = 'Гудфуд Звіт Замовлення';
     Caption = 'Gudfood Order Report';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;

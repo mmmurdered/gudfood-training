@@ -1,6 +1,5 @@
 xmlport 50101 "Gudfood Posted Order Export"
 {
-    //CaptionML = ENU = 'Export Posted Order to XML', UKR = 'Експортувати в XML файл';
     Caption = 'Export Posted Order to XML';
     Format = Xml;
     Direction = Export;

@@ -1,6 +1,5 @@
 page 50108 "Gudfood Order Activities"
 {
-    //CaptionML = ENU = 'Gudfood Order Activities', UKR = 'Активності Замовлень Гудфуд';
     Caption = 'Gudfood Order Activities';
     PageType = CardPart;
     ApplicationArea = All;

@@ -1,6 +1,5 @@
 page 50107 "Gudfood Order List"
 {
-    //CaptionML = ENU = 'Gudfood Order List', UKR = 'Гудфуд Список Замовлень';
     Caption = 'Gudfood Order List';
     PageType = List;
     UsageCategory = Lists;
@@ -52,7 +51,6 @@ page 50107 "Gudfood Order List"
                 Caption = 'Posting';
                 action(Post)
                 {
-                    //CaptionML = ENU = 'Post', UKR = 'Опублікувати';
                     Caption = 'Post';
                     Image = Post;
                     RunObject = codeunit "Gudfood Order Post";
@@ -66,7 +64,6 @@ page 50107 "Gudfood Order List"
                 Caption = 'Export';
                 action(ExportOrder)
                 {
-                    //CaptionML = ENU = 'Export to XML', UKR = 'Експортувати в XML';
                     Caption = 'Export to XML';
                     Image = XMLFile;
                     trigger OnAction()
@@ -81,7 +78,6 @@ page 50107 "Gudfood Order List"
                 Caption = 'Reports';
                 action(Report)
                 {
-                    //CaptionML = ENU = 'Print Report', UKR = 'Надрукувати звіт';
                     Caption = 'Print Report';
                     Image = Report;
                     trigger OnAction()

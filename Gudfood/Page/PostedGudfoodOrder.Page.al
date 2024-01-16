@@ -1,6 +1,5 @@
 page 50106 "Posted Gudfood Order"
 {
-    //CaptionML = ENU = 'Posted Gudfood Order', UKR = 'Опубліковані Замовлення Гудфуд';
     Caption = 'Posted Gudfood Order';
     PageType = Document;
     ApplicationArea = All;
@@ -50,7 +49,6 @@ page 50106 "Posted Gudfood Order"
             part("Gudfood Order Line"; "Posted Gudfood Order Subpage")
             {
                 SubPageLink = "Order No." = field("No.");
-                //CaptionML = ENU = 'Gudfood Sales Line', UKR = 'Гудфуд Лінії Продаж';
                 Caption = 'Gudfood Sales Line';
             }
         }

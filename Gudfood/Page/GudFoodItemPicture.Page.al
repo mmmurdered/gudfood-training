@@ -1,7 +1,6 @@
 page 50102 "Gudfood Item Picture FB"
 {
     Caption = 'Gudfood Item Picture';
-    //CaptionML = ENU = 'Gudfood Item Picture', UKR = 'Гудфуд Зображення Товару';
     PageType = CardPart;
     ApplicationArea = All;
     SourceTable = "Gudfood Item";
@@ -12,7 +11,6 @@ page 50102 "Gudfood Item Picture FB"
         {
             field("Gudfood Item Picture"; Rec.Picture)
             {
-                //ToolTipML = ENU = 'Picture of the item', UKR = 'Зображення товару';
                 ToolTip = 'Picture of the item';
             }
         }
@@ -23,10 +21,8 @@ page 50102 "Gudfood Item Picture FB"
         {
             action(ImportPicture)
             {
-                //CaptionML = ENU = 'Import Picture', UKR = 'Імпортувати зображення';
                 Caption = 'Import Picture';
                 Image = Picture;
-                //ToolTipML = ENU = 'Import a picture file.', UKR = 'Імпорт файлу зображення';
                 ToolTip = 'Import a picture file.';
 
                 trigger OnAction()
@@ -37,7 +33,6 @@ page 50102 "Gudfood Item Picture FB"
             action(RemovePicture)
             {
                 Image = Delete;
-                //CaptionML = ENU = 'Delete Picture', UKR = 'Видалити зображення';
                 Caption = 'Delete Picture';
                 trigger OnAction()
                 begin
