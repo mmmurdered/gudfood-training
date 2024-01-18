@@ -1,5 +1,6 @@
 table 50100 "Gudfood Item"
 {
+    DataCaptionFields = Code, Type;
     Caption = 'Goodfud Item';
 
     fields

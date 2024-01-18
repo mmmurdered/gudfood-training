@@ -1,5 +1,6 @@
 table 50103 "Posted Gudfood Order Header"
 {
+    DataCaptionFields = "No.", "Sell-to Customer Name";
     Caption = 'Posted Gudfood Order Header';
 
     fields
