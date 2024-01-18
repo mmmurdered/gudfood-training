@@ -107,7 +107,7 @@ page 50104 "Gudfood Order"
                     var
                         GudfoodOrderHeader: Record "Gudfood Order Header";
                     begin
-                        CurrPage.SetSelectionFilter(GudfoodOrderHeader);
+                        GudfoodOrderHeader.SetRange("No.", Rec."No.");
                         Xmlport.Run(Xmlport::"Gudfood Order Export", true, false, GudfoodOrderHeader);
                     end;
                 }

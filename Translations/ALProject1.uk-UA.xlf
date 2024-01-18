@@ -689,9 +689,33 @@
         </trans-unit>
         <trans-unit id="Page 2760287525 - Control 907109761 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Order Header</source>
-          <target state="needs-translation">Гудфуд Заголовок Замовлення</target>
+          <target state="translated">Гудфуд Заголовок Замовлення</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export</source>
+          <target state="translated">Експорт</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 274852470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <target state="translated">Експорт до XML</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action ExportOrder - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <target state="translated">Звіти</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Report</source>
+          <target state="translated">Надрукувати звіт</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2067450363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Gudfood Order List</source>

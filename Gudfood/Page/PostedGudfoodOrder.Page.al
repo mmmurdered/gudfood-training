@@ -53,4 +53,42 @@ page 50106 "Posted Gudfood Order"
             }
         }
     }
+    actions
+    {
+        area(Reporting)
+        {
+            group(Export)
+            {
+                Caption = 'Export';
+                action(ExportOrder)
+                {
+                    Caption = 'Export to XML';
+                    Image = XMLFile;
+                    trigger OnAction()
+                    var
+                        PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
+                    begin
+                        PostedGudfoodOrderHeader.SetRange("No.", Rec."No.");
+                        Xmlport.Run(Xmlport::"Gudfood Posted Order Export", false, false, PostedGudfoodOrderHeader);
+                    end;
+                }
+            }
+            group(Reports)
+            {
+                Caption = 'Reports';
+                action(Report)
+                {
+                    Caption = 'Print Report';
+                    Image = Report;
+                    trigger OnAction()
+                    var
+                        PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
+                    begin
+                        PostedGudfoodOrderHeader.SetRange("No.", Rec."No.");
+                        Report.Run(Report::"Gudfood Posted Order Report", true, false, PostedGudfoodOrderHeader);
+                    end;
+                }
+            }
+        }
+    }
 }
