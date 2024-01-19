@@ -633,7 +633,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>1.12376in</Top>
+            <Top>1.69668in</Top>
             <Left>0.54042in</Left>
             <Height>0.75in</Height>
             <Width>7.1979in</Width>
@@ -658,7 +658,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Date_Created</rd:DefaultName>
-            <Top>0.17583in</Top>
+            <Top>0.45014in</Top>
             <Left>6.97792in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -688,7 +688,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>USERID</rd:DefaultName>
-            <Top>0.49528in</Top>
+            <Top>0.77653in</Top>
             <Left>6.97792in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -718,7 +718,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Sell_to_Customer_No_</rd:DefaultName>
-            <Top>0.17583in</Top>
+            <Top>0.45014in</Top>
             <Left>0.54042in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -748,11 +748,101 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Sell_to_Customer_Name</rd:DefaultName>
-            <Top>0.49528in</Top>
+            <Top>1.08209in</Top>
             <Left>0.54042in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Sell_to_Customer_No_Caption">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Sell_to_Customer_No_Caption.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Sell_to_Customer_No_Caption</rd:DefaultName>
+            <Top>0.14458in</Top>
+            <Left>0.54042in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Sell_to_Customer_NameCaption">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Sell_to_Customer_NameCaption.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Sell_to_Customer_NameCaption</rd:DefaultName>
+            <Top>0.77653in</Top>
+            <Left>0.54042in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Date_Created_For_CaptionCaption">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Date_Created_For_CaptionCaption.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Date_Created_For_CaptionCaption</rd:DefaultName>
+            <Top>0.14458in</Top>
+            <Left>6.97792in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -774,6 +864,15 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
+    <ReportParameter Name="Date_Created_For_CaptionCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Date_Created_For_CaptionCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Date_Created_For_CaptionCaption</Prompt>
+    </ReportParameter>
     <ReportParameter Name="Sell_to_Customer_No_Caption">
       <DataType>String</DataType>
       <DefaultValue>
@@ -859,51 +958,56 @@
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>9</NumberOfRows>
+      <NumberOfRows>10</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>Sell_to_Customer_No_Caption</ParameterName>
+          <ParameterName>Date_Created_For_CaptionCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>Sell_to_Customer_NameCaption</ParameterName>
+          <ParameterName>Sell_to_Customer_No_Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>Total_AmountCaption</ParameterName>
+          <ParameterName>Sell_to_Customer_NameCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
-          <ParameterName>Item_No_Caption</ParameterName>
+          <ParameterName>Total_AmountCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>4</RowIndex>
-          <ParameterName>Item_TypeCaption</ParameterName>
+          <ParameterName>Item_No_Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>5</RowIndex>
-          <ParameterName>DescriptionCaption</ParameterName>
+          <ParameterName>Item_TypeCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>6</RowIndex>
-          <ParameterName>QuantityCaption</ParameterName>
+          <ParameterName>DescriptionCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>7</RowIndex>
-          <ParameterName>Unit_PriceCaption</ParameterName>
+          <ParameterName>QuantityCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>8</RowIndex>
+          <ParameterName>Unit_PriceCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>9</RowIndex>
           <ParameterName>AmountCaption</ParameterName>
         </CellDefinition>
       </CellDefinitions>
@@ -951,6 +1055,9 @@ End Function
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
+        <Field Name="Date_Created_For_Caption">
+          <DataField>Date_Created_For_Caption</DataField>
+        </Field>
         <Field Name="Date_Created">
           <DataField>Date_Created</DataField>
         </Field>

@@ -13,9 +13,12 @@ codeunit 50100 "Gudfood Order Post"
         GudfoodOrderLine: Record "Gudfood Order Line";
         PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
         ConfirmationMessage: Label 'Are you sure to post resords?';
-        SuccessfullyPostedOrderMessage: Label 'The order has been successfully posted';
+        SuccessfullyPostedOrderMessage: Label 'The order has been successfully posted, do yo want to open posted report?';
+        PostingNo: Code[20];
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
+            PostingNo := GudfoodOrder."Posting No.";
+
             PostedGudfoodOrderHeader.Init();
             PostedGudfoodOrderHeader.TransferFields(GudfoodOrder, true);
             PostedGudfoodOrderHeader."No." := GudfoodOrder."Posting No.";
@@ -31,9 +34,12 @@ codeunit 50100 "Gudfood Order Post"
                     PostedGudfoodOrderLine."Date Created" := Today;
                     PostedGudfoodOrderLine.Insert(true);
                 until GudfoodOrderLine.Next() = 0;
-
             GudfoodOrder.Delete(true);
-            Message(SuccessfullyPostedOrderMessage);
+
+            if Dialog.Confirm(SuccessfullyPostedOrderMessage) then begin
+                PostedGudfoodOrderHeader.Get(PostingNo);
+                Page.Run(Page::"Posted Gudfood Order", PostedGudfoodOrderHeader);
+            end;
         end;
     end;
 }

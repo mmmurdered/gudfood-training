@@ -44,50 +44,69 @@ page 50107 "Gudfood Order List"
     }
     actions
     {
-        area(Processing)
+        area(Promoted)
         {
             group(Posting)
             {
                 Caption = 'Posting';
-                action(Post)
+                actionref(PostActionRef; Post)
                 {
-                    Caption = 'Post';
-                    Image = Post;
-                    RunObject = codeunit "Gudfood Order Post";
-                }
-            }
-        }
-        area(Reporting)
-        {
-            group(Export)
-            {
-                Caption = 'Export';
-                action(ExportOrder)
-                {
-                    Caption = 'Export to XML';
-                    Image = XMLFile;
-                    trigger OnAction()
-                    begin
-                        CurrPage.SetSelectionFilter(Rec);
-                        Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
-                    end;
+
                 }
             }
             group(Reports)
             {
                 Caption = 'Reports';
-                action(Report)
+                actionref(ReportActionRef; Report)
                 {
-                    Caption = 'Print Report';
-                    Image = Report;
-                    trigger OnAction()
-                    var
-                        GudfoodOrderHeader: Record "Gudfood Order Header";
-                    begin
-                        GudfoodOrderHeader.SetRange("No.", Rec."No.");
-                        Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
-                    end;
+
                 }
+            }
+            group(Exporting)
+            {
+                Caption = 'Exporting';
+                actionref(ExportActionRef; Export)
+                {
+
+                }
+            }
+        }
+        area(Processing)
+        {
+            action(Post)
+            {
+                Caption = 'Post';
+                Image = Post;
+                RunObject = codeunit "Gudfood Order Post";
+            }
+
+        }
+        area(Reporting)
+        {
+
+
+            action(Export)
+            {
+                Caption = 'Export to XML';
+                Image = XMLFile;
+                trigger OnAction()
+                begin
+                    CurrPage.SetSelectionFilter(Rec);
+                    Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
+                end;
+            }
+
+            action(Report)
+            {
+                Caption = 'Print Report';
+                Image = Report;
+                trigger OnAction()
+                var
+                    GudfoodOrderHeader: Record "Gudfood Order Header";
+                begin
+                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
+                    Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
+                end;
             }
         }
     }

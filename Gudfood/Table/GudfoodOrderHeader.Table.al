@@ -80,6 +80,7 @@ table 50101 "Gudfood Order Header"
     begin
         SalesReceivablesSetup.Get();
         Rec."Date Created" := Today;
+        Rec."Order Date" := Today;
         if "No." = '' then begin
             SalesReceivablesSetup.TestField(SalesReceivablesSetup."Gudfood Order Nos.");
             Rec."No." := NoSeriesMgt.GetNextNo(SalesReceivablesSetup."Gudfood Order Nos.", Today, true);
@@ -107,10 +108,6 @@ table 50101 "Gudfood Order Header"
         NoSeriesMgt: Codeunit NoSeriesManagement;
         GudfoodOrderHeader: Record "Gudfood Order Header";
     begin
-        IsHandled := false;
-        if IsHandled then
-            exit;
-
         GudfoodOrderHeader.Copy(Rec);
         SalesReceivablesSetup.Get();
         SalesReceivablesSetup.TestField(SalesReceivablesSetup."Gudfood Order Nos.");

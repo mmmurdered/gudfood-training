@@ -9,6 +9,10 @@ report 50101 "Gudfood Posted Order Report"
     {
         dataitem(GudfoodPostedOrderHeader; "Posted Gudfood Order Header")
         {
+            column(Date_Created_For_Caption; "Date Created")
+            {
+                IncludeCaption = true;
+            }
             column(Date_Created; GetDateFormat("Date Created"))
             {
 
@@ -64,7 +68,7 @@ report 50101 "Gudfood Posted Order Report"
         layout(WordLayout)
         {
             Type = Word;
-            LayoutFile = 'GudfoodOrderWord.docx';
+            LayoutFile = 'GudfoodPostedOrderWord.docx';
         }
         layout(RDLCLayout)
         {

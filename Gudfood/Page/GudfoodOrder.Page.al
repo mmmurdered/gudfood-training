@@ -17,9 +17,6 @@ page 50104 "Gudfood Order"
                     ToolTip = 'Specified No of the Order, can be generated automatically';
 
                     trigger OnAssistEdit()
-                    var
-                        NoSeriesMgt: Codeunit NoSeriesManagement;
-                        SalesReceivablesSetup: Record "Sales & Receivables Setup";
                     begin
                         if Rec.AssistEdit(xRec) then
                             CurrPage.Update();
@@ -41,6 +38,7 @@ page 50104 "Gudfood Order"
                 }
                 field("Posting No."; Rec."Posting No.")
                 {
+                    Visible = false;
                     ToolTip = 'Specified No of the Posted Order, can be generated automatically';
                 }
                 field("Date Created"; Rec."Date Created")
@@ -65,52 +63,68 @@ page 50104 "Gudfood Order"
     }
     actions
     {
-        area(Processing)
+        area(Promoted)
         {
             group(Posting)
             {
                 Caption = 'Posting';
-                action(Post)
+                actionref(PostActionRef; Post)
                 {
-                    Caption = 'Post';
-                    Image = Post;
-                    RunObject = codeunit "Gudfood Order Post";
+
                 }
             }
-        }
-        area(Reporting)
-        {
             group(Reports)
             {
                 Caption = 'Reports';
-                action(Report)
+                actionref(ReportActionRef; Report)
                 {
-                    Caption = 'Print Report';
-                    Image = Report;
-                    trigger OnAction()
-                    var
-                        GudfoodOrderHeader: Record "Gudfood Order Header";
-                    begin
-                        GudfoodOrderHeader.SetRange("No.", Rec."No.");
-                        Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
-                    end;
+
                 }
             }
             group(Exporting)
             {
                 Caption = 'Exporting';
-                action(ExportOrder)
+                actionref(ExportActionRef; Export)
                 {
-                    Caption = 'Export to XML';
-                    Image = XMLFile;
-                    trigger OnAction()
-                    var
-                        GudfoodOrderHeader: Record "Gudfood Order Header";
-                    begin
-                        GudfoodOrderHeader.SetRange("No.", Rec."No.");
-                        Xmlport.Run(Xmlport::"Gudfood Order Export", true, false, GudfoodOrderHeader);
-                    end;
+
                 }
+            }
+        }
+        area(Processing)
+        {
+            action(Post)
+            {
+                Caption = 'Post';
+                Image = Post;
+                RunObject = codeunit "Gudfood Order Post";
+            }
+        }
+        area(Reporting)
+        {
+            action(Report)
+            {
+                Caption = 'Print Report';
+                Image = Report;
+                trigger OnAction()
+                var
+                    GudfoodOrderHeader: Record "Gudfood Order Header";
+                begin
+                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
+                    Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
+                end;
+
+            }
+            action(Export)
+            {
+                Caption = 'Export to XML';
+                Image = XMLFile;
+                trigger OnAction()
+                var
+                    GudfoodOrderHeader: Record "Gudfood Order Header";
+                begin
+                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
+                    Xmlport.Run(Xmlport::"Gudfood Order Export", true, false, GudfoodOrderHeader);
+                end;
             }
         }
     }

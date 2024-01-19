@@ -9,6 +9,10 @@ report 50100 "Gudfood Order Report"
     {
         dataitem(GudfoodOrderHeader; "Gudfood Order Header")
         {
+            column(Date_Created_For_Caption; "Date Created")
+            {
+                IncludeCaption = true;
+            }
             column(Date_Created; GetDateFormat("Date Created"))
             {
 

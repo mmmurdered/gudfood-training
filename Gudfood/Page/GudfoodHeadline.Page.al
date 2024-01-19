@@ -37,7 +37,9 @@ page 50110 "Gudfood Headline"
     local procedure GetWelcomeText(): Text[250]
     var
         WelcomeLabel: Label 'Welcome to Gudfood, ';
+        User: Record User;
     begin
-        exit(WelcomeLabel + UserId);
+        User.Get(UserSecurityID);
+        exit(WelcomeLabel + User."Full Name");
     end;
 }

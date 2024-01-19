@@ -358,8 +358,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method PostOrder - NamedType ConfirmationMessage</note>
         </trans-unit>
         <trans-unit id="Codeunit 434910150 - Method 2751330090 - NamedType 570608655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The order has been successfully posted</source>
-          <target state="translated">Замовлення було успішно обліковане</target>
+          <source>The order has been successfully posted, do yo want to open posted report?</source>
+          <target state="translated">Замовлення було успішно обліковане, відкрити сторінку облікованого замовлення?</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method PostOrder - NamedType SuccessfullyPostedOrderMessage</note>
         </trans-unit>
@@ -579,12 +579,6 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Total Qty - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 201881534 - Action 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Posting</source>
-          <target state="translated">Облікування</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Posting - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 201881534 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Post</source>
           <target state="translated">Облікувати</target>
@@ -597,17 +591,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Exporting - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 201881534 - Action 274852470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export to XML</source>
-          <target state="translated">Експорт в XML</target>
+        <trans-unit id="Page 201881534 - Action 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting</source>
+          <target state="translated">Облікування</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action ExportOrder - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Posting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 201881534 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reports</source>
           <target state="translated">Звіти</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <target state="translated">Експорт в XML</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Export - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 201881534 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Report</source>
@@ -633,35 +633,35 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2070028540 - Action 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Posting</source>
-          <target state="translated">Облікування</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Posting - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2070028540 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Post</source>
           <target state="translated">Облікувати</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Post - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2070028540 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export</source>
+        <trans-unit id="Page 2070028540 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
           <target state="translated">Експорт</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Export - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Exporting - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2070028540 - Action 274852470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export to XML</source>
-          <target state="translated">Експорт в XML</target>
+        <trans-unit id="Page 2070028540 - Action 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting</source>
+          <target state="translated">Облікування</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action ExportOrder - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Posting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2070028540 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reports</source>
           <target state="translated">Звіти</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <target state="translated">Експорт в XML</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Export - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2070028540 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Report</source>
@@ -693,23 +693,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Header - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2760287525 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export</source>
+        <trans-unit id="Page 2760287525 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
           <target state="translated">Експорт</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Export - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2760287525 - Action 274852470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export to XML</source>
-          <target state="translated">Експорт до XML</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action ExportOrder - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Exporting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2760287525 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reports</source>
           <target state="translated">Звіти</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <target state="translated">Експорт в XML</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Export - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2760287525 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Report</source>
@@ -723,23 +723,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2067450363 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export</source>
+        <trans-unit id="Page 2067450363 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
           <target state="translated">Експорт</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Export - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2067450363 - Action 274852470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export to XML</source>
-          <target state="translated">Експорт в XML</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action ExportOrder - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Exporting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2067450363 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reports</source>
           <target state="translated">Звіти</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2067450363 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <target state="translated">Експорт в XML</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Export - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2067450363 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Report</source>
