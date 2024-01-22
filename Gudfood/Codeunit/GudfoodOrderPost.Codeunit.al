@@ -17,6 +17,7 @@ codeunit 50100 "Gudfood Order Post"
         PostingNo: Code[20];
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
+            OnBeforePostGudfoodOrder(GudfoodOrder, true);
             PostingNo := GudfoodOrder."Posting No.";
 
             PostedGudfoodOrderHeader.Init();
@@ -34,6 +35,8 @@ codeunit 50100 "Gudfood Order Post"
                     PostedGudfoodOrderLine."Date Created" := Today;
                     PostedGudfoodOrderLine.Insert(true);
                 until GudfoodOrderLine.Next() = 0;
+
+
             GudfoodOrder.Delete(true);
 
             if Dialog.Confirm(SuccessfullyPostedOrderMessage) then begin
@@ -41,5 +44,10 @@ codeunit 50100 "Gudfood Order Post"
                 Page.Run(Page::"Posted Gudfood Order", PostedGudfoodOrderHeader);
             end;
         end;
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnBeforePostGudfoodOrder(var GudfoodOrderHeader: Record "Gudfood Order Header"; IsHandled: Boolean)
+    begin
     end;
 }

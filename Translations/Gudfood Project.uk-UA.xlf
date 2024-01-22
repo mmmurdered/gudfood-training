@@ -623,7 +623,7 @@
         </trans-unit>
         <trans-unit id="Page 930372099 - Control 201881534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Order</source>
-          <target state="translated">Замолвення Гудфуд</target>
+          <target state="translated">Замовлення Гудфуд</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order Activities - Control Gudfood Order - Property Caption</note>
         </trans-unit>

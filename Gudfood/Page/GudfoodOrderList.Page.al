@@ -6,7 +6,7 @@ page 50107 "Gudfood Order List"
     SourceTable = "Gudfood Order Header";
     CardPageId = "Gudfood Order";
     ApplicationArea = All;
-    Editable = false;
+    //Editable = false;
 
     layout
     {
