@@ -531,11 +531,11 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Header - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 201881534 - Control 2274545686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 201881534 - Control 3431103444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Information</source>
           <target state="translated">Інформація про Клієнта</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control CustomerInfo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Customer Information - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 201881534 - Control 1474036805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specified Customer name</source>

@@ -583,6 +583,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Header - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2760287525 - Control 3431103444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Customer Information - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2760287525 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Exporting</source>
           <note from="Developer" annotates="general" priority="2"></note>
