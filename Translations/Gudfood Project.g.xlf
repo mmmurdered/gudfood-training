@@ -443,6 +443,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Header - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 201881534 - Control 3431103444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Customer Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 1474036805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Customer name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 1225278069 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Customer sell to of the Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 201881534 - Control 2972662832 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specified Created Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -462,16 +477,6 @@
           <source>Specified No of the Posted Order, can be generated automatically</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Posting No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 201881534 - Control 1474036805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specified Customer name</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer Name - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 201881534 - Control 1225278069 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specified Customer sell to of the Order</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 201881534 - Control 3692706522 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specified Amount of Order</source>

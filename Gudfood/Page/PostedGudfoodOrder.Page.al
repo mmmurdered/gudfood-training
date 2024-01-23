@@ -17,13 +17,16 @@ page 50106 "Posted Gudfood Order"
                 {
 
                 }
-                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
+                group(CustomerInfo)
                 {
+                    field("Sell-to Customer No."; Rec."Sell-to Customer No.")
+                    {
 
-                }
-                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
-                {
+                    }
+                    field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
+                    {
 
+                    }
                 }
                 field("Order Date"; Rec."Order Date")
                 {

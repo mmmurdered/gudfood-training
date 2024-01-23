@@ -23,15 +23,6 @@ page 50104 "Gudfood Order"
                     end;
 
                 }
-                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
-                {
-                    ToolTip = 'Specified Customer sell to of the Order';
-                    ShowMandatory = true;
-                }
-                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
-                {
-                    ToolTip = 'Specified Customer name';
-                }
                 field("Order Date"; Rec."Order Date")
                 {
                     ToolTip = 'Specified Order Date';
@@ -53,8 +44,21 @@ page 50104 "Gudfood Order"
                 {
                     ToolTip = 'Specified Amount of Order';
                 }
+                group("Customer Information")
+                {
+                    Caption = 'Customer Information';
+                    field("Sell-to Customer No."; Rec."Sell-to Customer No.")
+                    {
+                        ToolTip = 'Specified Customer sell to of the Order';
+                        ShowMandatory = true;
+                    }
+                    field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
+                    {
+                        ToolTip = 'Specified Customer name';
+                    }
+                }
             }
-            part(GudfoodOrderLine; "Gudfood Order Subpage")
+            part("Gudfood Order Line"; "Gudfood Order Subpage")
             {
                 UpdatePropagation = Both;
                 SubPageLink = "Order No." = field("No.");

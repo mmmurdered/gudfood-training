@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="uk-UA" original="ALProject1">
+  <file datatype="xml" source-language="en-US" target-language="uk-UA" original="Gudfood Project">
     <body>
       <group id="body">
         <trans-unit id="Table 1903646731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -125,7 +125,7 @@
         </trans-unit>
         <trans-unit id="Table 4222363240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Order Line</source>
-          <target state="translated">Гудфуд Лінія Замовлення</target>
+          <target state="translated">Гудфуд Рядок Замовлення</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Property Caption</note>
         </trans-unit>
@@ -287,7 +287,7 @@
         </trans-unit>
         <trans-unit id="Table 3631824407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Gudfood Order Line</source>
-          <target state="translated">Гудфуд Лінія Облікованих Замовлень</target>
+          <target state="translated">Гудфуд Рядок Облікованих Замовлень</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Property Caption</note>
         </trans-unit>
@@ -531,6 +531,24 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Header - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 201881534 - Control 2274545686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Information</source>
+          <target state="translated">Інформація про Клієнта</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control CustomerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 1474036805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Customer name</source>
+          <target state="translated">Вказане ім'я клієнта</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 1225278069 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Customer sell to of the Order</source>
+          <target state="translated">Вказаний Клієнт якому продано</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 201881534 - Control 2972662832 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specified Created Date</source>
           <target state="translated">Вказана Дата Створення</target>
@@ -554,18 +572,6 @@
           <target state="translated">Вказаний Номер Олбікованого Замовлення, може бути згенерований автоматично</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Posting No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 201881534 - Control 1474036805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specified Customer name</source>
-          <target state="translated">Вказане ім'я клієнта</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer Name - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 201881534 - Control 1225278069 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specified Customer sell to of the Order</source>
-          <target state="translated">Вказаний Клієнт якому продано</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 201881534 - Control 3692706522 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specified Amount of Order</source>
@@ -671,7 +677,7 @@
         </trans-unit>
         <trans-unit id="Page 2651207663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Order Lines</source>
-          <target state="translated">Гудфуд Лінія Замовлення</target>
+          <target state="translated">Гудфуд Рядок Замовлення</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order Subpage - Property Caption</note>
         </trans-unit>
@@ -683,7 +689,7 @@
         </trans-unit>
         <trans-unit id="Page 2760287525 - Control 4222363240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Sales Line</source>
-          <target state="translated">Гудфуд Лінія Замовлення</target>
+          <target state="translated">Гудфуд Рядок Замовлення</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Gudfood Order Line - Property Caption</note>
         </trans-unit>
