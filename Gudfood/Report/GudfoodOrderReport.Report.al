@@ -68,11 +68,13 @@ report 50100 "Gudfood Order Report"
         layout(WordLayout)
         {
             Type = Word;
+            Caption = 'Gudfood Order Report (Word)';
             LayoutFile = 'GudfoodOrderWord.docx';
         }
         layout(RDLCLayout)
         {
             Type = RDLC;
+            Caption = 'Gudfood Order Report (RDLC)';
             LayoutFile = 'RDLReport.rdl';
         }
     }

@@ -699,6 +699,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Header - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2760287525 - Control 3431103444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Information</source>
+          <target state="Translated">Інформація про Клієнта</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Customer Information - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2760287525 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Exporting</source>
           <target state="translated">Експорт</target>
@@ -764,6 +770,18 @@
           <target state="translated">Гудфуд Звіт Замовлення</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2838874104 - ReportLayout 3367648989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Report (RDLC)</source>
+          <target state="translated">Гудфуд Звіт Замовлення(RDLC)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - ReportLayout RDLCLayout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2838874104 - ReportLayout 3548004808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Report (Word)</source>
+          <target state="translated">Гудфуд Звіт Замовлення(Word)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - ReportLayout WordLayout - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3126130887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Posted Order Report</source>
