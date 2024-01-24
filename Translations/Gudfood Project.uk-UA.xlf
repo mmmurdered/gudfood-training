@@ -173,7 +173,7 @@
         </trans-unit>
         <trans-unit id="Table 4222363240 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target state="translated">Номер лінії</target>
+          <target state="translated">Номер рядку</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Line No. - Property Caption</note>
         </trans-unit>
