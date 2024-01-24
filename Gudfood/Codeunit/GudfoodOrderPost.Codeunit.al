@@ -17,7 +17,7 @@ codeunit 50100 "Gudfood Order Post"
         PostingNo: Code[20];
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
-            OnBeforePostGudfoodOrder(GudfoodOrder, true);
+            OnBeforePostGudfoodOrder(GudfoodOrder);
             PostingNo := GudfoodOrder."Posting No.";
 
             PostedGudfoodOrderHeader.Init();
@@ -47,7 +47,7 @@ codeunit 50100 "Gudfood Order Post"
     end;
 
     [IntegrationEvent(true, false)]
-    local procedure OnBeforePostGudfoodOrder(var GudfoodOrderHeader: Record "Gudfood Order Header"; IsHandled: Boolean)
+    local procedure OnBeforePostGudfoodOrder(var GudfoodOrderHeader: Record "Gudfood Order Header")
     begin
     end;
 }
