@@ -17,6 +17,18 @@ page 50106 "Posted Gudfood Order"
                 {
 
                 }
+                group("Customer Information")
+                {
+                    Caption = 'Customer Information';
+                    field("Sell-to Customer No."; Rec."Sell-to Customer No.")
+                    {
+
+                    }
+                    field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
+                    {
+
+                    }
+                }
                 field("Order Date"; Rec."Order Date")
                 {
 
@@ -36,18 +48,6 @@ page 50106 "Posted Gudfood Order"
                 field("Total Amount"; Rec."Total Amount")
                 {
 
-                }
-                group("Customer Information")
-                {
-                    Caption = 'Customer Information';
-                    field("Sell-to Customer No."; Rec."Sell-to Customer No.")
-                    {
-
-                    }
-                    field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
-                    {
-
-                    }
                 }
             }
             part("Gudfood Order Line"; "Posted Gudfood Order Subpage")
