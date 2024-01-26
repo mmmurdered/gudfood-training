@@ -6,7 +6,6 @@ page 50107 "Gudfood Order List"
     SourceTable = "Gudfood Order Header";
     CardPageId = "Gudfood Order";
     ApplicationArea = All;
-    //Editable = false;
 
     layout
     {
@@ -25,9 +24,6 @@ page 50107 "Gudfood Order List"
                 {
                 }
                 field("Order Date"; Rec."Order Date")
-                {
-                }
-                field("Posting No."; Rec."Posting No.")
                 {
                 }
                 field("Date Created"; Rec."Date Created")
