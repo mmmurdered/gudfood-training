@@ -1,49 +1,53 @@
-codeunit 50100 GudfoodOrderPost
+codeunit 50100 "Gudfood Order Post"
 {
-    TableNo = GudfoodOrderHeader;
+    TableNo = "Gudfood Order Header";
 
     trigger OnRun()
     begin
-
+        PostOrder(Rec);
     end;
 
+    procedure PostOrder(GudfoodOrder: Record "Gudfood Order Header")
     var
-        PostedGudfoodOrderLine: Record PostedGudfoodOrderline;
-        GudfoodOrderLine: Record GudfoodOrderLine;
-        PostedGudfoodOrderHeader: Record PostedGudfoodOrderHeader;
-        GudfoodOrderHeader: Record GudfoodOrderHeader;
+        PostedGudfoodOrderLine: Record "Posted Gudfood Order Line";
+        GudfoodOrderLine: Record "Gudfood Order Line";
+        PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
         ConfirmationMessage: Label 'Are you sure to post resords?';
-        CancelMessage: Label 'Posting was cancelled';
-        SuccessfullyPostedOrderMessage: Label 'The order has been successfully posted';
-
-    procedure PostOrder(var GudfoodOrder: Record GudfoodOrderHeader)
+        SuccessfullyPostedOrderMessage: Label 'The order has been successfully posted, do yo want to open posted report?';
+        PostingNo: Code[20];
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
-            if GudfoodOrder."No." <> '' then begin
-                GudfoodOrderHeader.GET(GudfoodOrder."No.");
+            OnBeforePostGudfoodOrder(GudfoodOrder);
+            PostingNo := GudfoodOrder."Posting No.";
 
-                PostedGudfoodOrderHeader.INIT;
-                PostedGudfoodOrderHeader.TRANSFERFIELDS(GudfoodOrderHeader, TRUE);
-                PostedGudfoodOrderHeader."No." := GudfoodOrderHeader."Posting No.";
-                PostedGudfoodOrderHeader."Posting Date" := Today;
-                PostedGudfoodOrderHeader.INSERT(TRUE);
+            PostedGudfoodOrderHeader.Init();
+            PostedGudfoodOrderHeader.TransferFields(GudfoodOrder, true);
+            PostedGudfoodOrderHeader."No." := GudfoodOrder."Posting No.";
+            PostedGudfoodOrderHeader."Posting Date" := Today;
+            PostedGudfoodOrderHeader.Insert(true);
 
-                if (GudfoodOrderLine.FINDSET) then begin
-                    GudfoodOrderLine.SetRange("Order No.", GudfoodOrder."No.");
-                    GudfoodOrderLine.FINDSET();
-                    PostedGudfoodOrderLine.INIT;
-                    REPEAT
-                        PostedGudfoodOrderLine.TRANSFERFIELDS(GudfoodOrderLine, TRUE);
-                        PostedGudfoodOrderLine."Order No." := GudfoodOrderHeader."Posting No.";
-                        PostedGudfoodOrderLine."Date Created" := Today;
-                        PostedGudfoodOrderLine.INSERT(TRUE);
-                    UNTIL GudfoodOrderLine.NEXT = 0;
-                end;
+            GudfoodOrderLine.SetRange("Order No.", GudfoodOrder."No.");
+            if GudfoodOrderLine.FindSet() then
+                repeat
+                    PostedGudfoodOrderLine.Init();
+                    PostedGudfoodOrderLine.TransferFields(GudfoodOrderLine, true);
+                    PostedGudfoodOrderLine."Order No." := GudfoodOrder."Posting No.";
+                    PostedGudfoodOrderLine."Date Created" := Today;
+                    PostedGudfoodOrderLine.Insert(true);
+                until GudfoodOrderLine.Next() = 0;
 
-                GudfoodOrderHeader.DELETE(TRUE);
-                GudfoodOrderLine.DeleteAll(TRUE);
+
+            GudfoodOrder.Delete(true);
+
+            if Dialog.Confirm(SuccessfullyPostedOrderMessage) then begin
+                PostedGudfoodOrderHeader.Get(PostingNo);
+                Page.Run(Page::"Posted Gudfood Order", PostedGudfoodOrderHeader);
             end;
-            Message(SuccessfullyPostedOrderMessage);
         end;
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnBeforePostGudfoodOrder(var GudfoodOrderHeader: Record "Gudfood Order Header")
+    begin
     end;
 }

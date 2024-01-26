@@ -1,39 +1,50 @@
-page 50107 "Gudfood Order List"
+page 50111 "Posted Gudfood Order List"
 {
-    Caption = 'Gudfood Order List';
+    Caption = 'Posted Gudfood Order List';
     PageType = List;
-    UsageCategory = Lists;
-    SourceTable = "Gudfood Order Header";
-    CardPageId = "Gudfood Order";
+    UsageCategory = History;
+    SourceTable = "Posted Gudfood Order Header";
+    CardPageId = "Posted Gudfood Order";
     ApplicationArea = All;
+    Editable = false;
 
     layout
     {
         area(Content)
         {
-            repeater("Order Header")
+            repeater("Posted Orders")
             {
                 field("No."; Rec."No.")
                 {
 
                 }
+                field("Posted Date"; Rec."Posting Date")
+                {
+
+                }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+
                 }
                 field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+
                 }
                 field("Order Date"; Rec."Order Date")
                 {
+
                 }
                 field("Date Created"; Rec."Date Created")
                 {
+
                 }
                 field("Total Qty"; Rec."Total Qty")
                 {
+
                 }
                 field("Total Amount"; Rec."Total Amount")
                 {
+
                 }
             }
         }
@@ -42,14 +53,6 @@ page 50107 "Gudfood Order List"
     {
         area(Promoted)
         {
-            group(Posting)
-            {
-                Caption = 'Posting';
-                actionref(PostActionRef; Post)
-                {
-
-                }
-            }
             group(Reports)
             {
                 Caption = 'Reports';
@@ -67,20 +70,8 @@ page 50107 "Gudfood Order List"
                 }
             }
         }
-        area(Processing)
-        {
-            action(Post)
-            {
-                Caption = 'Post';
-                Image = Post;
-                RunObject = codeunit "Gudfood Order Post";
-            }
-
-        }
         area(Reporting)
         {
-
-
             action(Export)
             {
                 Caption = 'Export to XML';
@@ -88,7 +79,7 @@ page 50107 "Gudfood Order List"
                 trigger OnAction()
                 begin
                     CurrPage.SetSelectionFilter(Rec);
-                    Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
+                    Xmlport.Run(Xmlport::"Gudfood Posted Order Export", false, false, Rec);
                 end;
             }
 
@@ -98,10 +89,10 @@ page 50107 "Gudfood Order List"
                 Image = Report;
                 trigger OnAction()
                 var
-                    GudfoodOrderHeader: Record "Gudfood Order Header";
+                    PostedGudfoodOrderHeader: Record "Posted Gudfood Order Header";
                 begin
-                    GudfoodOrderHeader.SetRange("No.", Rec."No.");
-                    Report.Run(Report::"Gudfood Order Report", true, false, GudfoodOrderHeader);
+                    PostedGudfoodOrderHeader.SetRange("No.", Rec."No.");
+                    Report.Run(Report::"Gudfood Posted Order Report", true, false, PostedGudfoodOrderHeader);
                 end;
             }
         }

@@ -1,61 +1,56 @@
-table 50103 PostedGudfoodOrderHeader
+table 50103 "Posted Gudfood Order Header"
 {
-    CaptionML = ENU = 'Posted Gudfood Order Header', UKR = 'Заголовок Опублікованого Замовлення Гудфуд';
-    TableType = Normal;
+    DataCaptionFields = "No.", "Sell-to Customer Name";
+    Caption = 'Posted Gudfood Order Header';
 
     fields
     {
         field(1; "No."; Code[20])
         {
-            CaptionML = UKR = 'Номер Замовлення', ENU = 'Order Number';
+            Caption = 'No.';
             Editable = false;
         }
         field(10; "Sell-to Customer No."; Code[20])
         {
-            CaptionML = UKR = 'Продано клієнту за номером', ENU = 'Sell to Customer No.';
+            Caption = 'Sell to Customer No.';
             Editable = false;
+            TableRelation = Customer."No.";
         }
         field(11; "Sell-to Customer Name"; Text[100])
         {
-            CaptionML = UKR = 'Продано клієнту за Іменем', ENU = 'Sell-to Customer Name';
+            Caption = 'Sell-to Customer Name';
             Editable = false;
         }
         field(20; "Order Date"; Date)
         {
-            CaptionML = UKR = 'Дата замовлення', ENU = 'Order Date';
+            Caption = 'Order Date';
+            Editable = false;
+        }
+        field(21; "Posting Date"; Date)
+        {
+            Caption = 'Posting Date';
+            Editable = false;
+        }
+        field(30; "Date Created"; Date)
+        {
+            Caption = 'Date Created';
             Editable = false;
         }
 
-        field(30; "Posting No."; Code[20])
+        field(40; "Total Qty"; Decimal)
         {
-            CaptionML = UKR = 'Пост номер', ENU = 'Posting No.';
-            Editable = false;
-        }
-        field(31; "Posting Date"; Date)
-        {
-            CaptionML = UKR = 'Пост номер', ENU = 'Posting Date';
-            Editable = false;
-        }
-        field(40; "Date Created"; Date)
-        {
-            CaptionML = UKR = 'Дата створення', ENU = 'Date Created';
-            Editable = false;
-        }
-
-        field(50; "Total Qty"; Decimal)
-        {
-            CaptionML = UKR = 'Загальна кількість', ENU = 'Total Quantity';
+            Caption = 'Total Quantity';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum(PostedGudfoodOrderline.Quantity where("Order No." = field("Posting No.")));
+            CalcFormula = sum("Posted Gudfood Order Line".Quantity where("Order No." = field("No.")));
         }
 
-        field(51; "Total Amount"; Decimal)
+        field(41; "Total Amount"; Decimal)
         {
-            CaptionML = UKR = 'Загальна сума', ENU = 'Total Amount';
+            Caption = 'Total Amount';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum(PostedGudfoodOrderline.Amount where("Order No." = field("Posting No.")));
+            CalcFormula = sum("Posted Gudfood Order Line".Amount where("Order No." = field("No.")));
         }
     }
 
@@ -66,5 +61,4 @@ table 50103 PostedGudfoodOrderHeader
             Clustered = true;
         }
     }
-
 }

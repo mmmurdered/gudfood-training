@@ -1,8 +1,8 @@
-page 50101 GudfoodItemCard
+page 50101 "Gudfood Item Card"
 {
-    CaptionML = UKR = 'Гудфуд картка товару', ENU = 'Gudfood Item Card';
+    Caption = 'Gudfood Item Card';
     PageType = Card;
-    SourceTable = GudfoodItem;
+    SourceTable = "Gudfood Item";
     ApplicationArea = All;
 
     layout
@@ -13,71 +13,49 @@ page 50101 GudfoodItemCard
             {
                 field(Code; Rec.Code)
                 {
-                    ToolTipML = ENU = 'Input code of the item', UKR = 'Введіть код товару';
+                    ToolTip = 'Specified code of the item';
                 }
                 field(Description; Rec.Description)
                 {
-                    ToolTipML = ENU = 'Input description of the item', UKR = 'Введіть опис товару';
+                    ToolTip = 'Specified description of the item';
                     ShowMandatory = true;
                     NotBlank = true;
 
                 }
                 field(Type; Rec.Type)
                 {
-                    ToolTipML = ENU = 'Input type of the item', UKR = 'Оберіть тип товару';
-                    ShowMandatory = true;
-                    NotBlank = true;
+                    ToolTip = 'Specified type of the item';
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {
-                    ToolTipML = ENU = 'Input unit price of the item', UKR = 'Введіть ціну за одиницю товару';
+                    ToolTip = 'Specified unit price of the item';
                     ShowMandatory = true;
                     NotBlank = true;
                 }
                 field("Shelf Life"; Rec."Shelf Life")
                 {
-                    ToolTipML = ENU = 'Input Shelf Life of the item', UKR = 'Введіть срок придатності товару';
+                    ToolTip = 'Specified Shelf Life of the item';
                 }
             }
             group("Ordered Details")
             {
                 field("Qty. Ordered"; Rec."Qty. Ordered")
                 {
-                    ToolTipML = ENU = 'Quantity Ordered', UKR = 'Кількість вже замовлених';
+                    ToolTip = 'Quantity Ordered';
                     Editable = false;
                 }
                 field("Qty. in Order"; Rec."Qty. in Order")
                 {
-                    ToolTipML = ENU = 'Quantity in Order currently', UKR = 'Кількість замовлених на даний момент';
+                    ToolTip = 'Quantity in Order currently';
                     Editable = false;
                 }
             }
         }
         area(FactBoxes)
         {
-            part(Picture; GudfoodItemPicture)
+            part("Gudfood Item Picture"; "Gudfood Item Picture FB")
             {
                 SubPageLink = Code = field(Code);
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ImportPicture)
-            {
-                CaptionML = ENU = 'Import Picture', UKR = 'Імпортувати зображення';
-                Image = Picture;
-                ToolTipML = ENU = 'Import a picture file.', UKR = 'Імпорт файлу зображення';
-
-                trigger OnAction()
-                var
-                    ImportPicture: Codeunit GudfoodItemImportPicture;
-                begin
-                    ImportPicture.ImportFromDevice(Rec);
-                end;
             }
         }
     }

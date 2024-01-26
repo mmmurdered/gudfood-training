@@ -1,13 +1,13 @@
-report 50100 "Gudfood Order Report"
+report 50101 "Gudfood Posted Order Report"
 {
-    Caption = 'Gudfood Order Report';
+    Caption = 'Gudfood Posted Order Report';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultRenderingLayout = RDLCLayout;
 
     dataset
     {
-        dataitem(GudfoodOrderHeader; "Gudfood Order Header")
+        dataitem(GudfoodPostedOrderHeader; "Posted Gudfood Order Header")
         {
             column(Date_Created_For_Caption; "Date Created")
             {
@@ -33,7 +33,7 @@ report 50100 "Gudfood Order Report"
             {
                 IncludeCaption = true;
             }
-            dataitem(GudfoodOrderLine; "Gudfood Order Line")
+            dataitem(GudfoodPostedOrderLine; "Posted Gudfood Order Line")
             {
                 DataItemLink = "Order No." = field("No.");
                 column(Item_No_; "Item No.")
@@ -68,13 +68,13 @@ report 50100 "Gudfood Order Report"
         layout(WordLayout)
         {
             Type = Word;
-            Caption = 'Gudfood Order Report (Word)';
-            LayoutFile = 'GudfoodOrderWord.docx';
+            Caption = 'Gudfood Posted Order Report (Word)';
+            LayoutFile = 'GudfoodPostedOrderWord.docx';
         }
         layout(RDLCLayout)
         {
             Type = RDLC;
-            Caption = 'Gudfood Order Report (RDLC)';
+            Caption = 'Gudfood Posted Order Report (RDLC)';
             LayoutFile = 'RDLReport.rdl';
         }
     }

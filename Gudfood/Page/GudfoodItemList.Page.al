@@ -1,14 +1,12 @@
-page 50100 GudfoodItemList
+page 50100 "Gudfood Item List"
 {
-    CaptionML = UKR = 'Гудфут список товарів', ENU = 'Gudfood Item List';
+    Caption = 'Gudfood Item List';
     UsageCategory = Lists;
-    CardPageId = 50101;
+    CardPageId = "Gudfood Item Card";
     PageType = List;
-    SourceTable = GudfoodItem;
-    ModifyAllowed = false;
-    InsertAllowed = true;
-    DeleteAllowed = true;
+    SourceTable = "Gudfood Item";
     ApplicationArea = All;
+    Editable = false;
 
     layout
     {
@@ -18,57 +16,39 @@ page 50100 GudfoodItemList
             {
                 field(Code; Rec.Code)
                 {
-                    ToolTipML = ENU = 'Сode of the item', UKR = 'Код товару';
+                    ToolTip = 'Сode of the item';
                 }
                 field(Description; Rec.Description)
                 {
-                    ToolTipML = ENU = 'Description of the item', UKR = 'Опис товару';
+                    ToolTip = 'Description of the item';
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {
-                    ToolTipML = ENU = 'Unit Price of the item', UKR = 'Ціна за одиницю товару';
-
+                    ToolTip = 'Unit Price of the item';
                 }
                 field(Type; Rec.Type)
                 {
-                    ToolTipML = ENU = 'Type of the item', UKR = 'Тип товару';
-
+                    ToolTip = 'Type of the item';
                 }
                 field("Qty. Ordered"; Rec."Qty. Ordered")
                 {
-                    ToolTipML = ENU = 'Quantity Ordered', UKR = 'Кількість замовлених';
-
+                    ToolTip = 'Quantity Ordered';
                 }
                 field("Qty. in Order"; Rec."Qty. in Order")
                 {
-                    ToolTipML = ENU = 'Quantity in Order', UKR = 'Кількість в замовленні';
-
+                    ToolTip = 'Quantity in Order';
                 }
                 field("Shelf Life"; Rec."Shelf Life")
                 {
-                    ToolTipML = ENU = 'Shelf Life of the item', UKR = 'Срок придатності товару';
+                    ToolTip = 'Shelf Life of the item';
                 }
             }
         }
         area(FactBoxes)
         {
-            part(Picture; GudfoodItemPicture)
+            part(Picture; "Gudfood Item Picture FB")
             {
                 SubPageLink = Code = field(Code);
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                trigger OnAction()
-                begin
-
-                end;
             }
         }
     }

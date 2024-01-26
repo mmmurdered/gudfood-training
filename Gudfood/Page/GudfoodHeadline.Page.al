@@ -1,5 +1,6 @@
-page 50110 GudfoodHeadline
+page 50110 "Gudfood Headline"
 {
+    Caption = 'Gudfood Headline';
     PageType = HeadlinePart;
     ApplicationArea = All;
 
@@ -9,12 +10,12 @@ page 50110 GudfoodHeadline
         {
             group(General)
             {
-                field(Welcome; 'Welcome to Gudfood!')
+                field(Welcome; GetWelcomeText())
                 {
                     ApplicationArea = All;
 
                 }
-                field(TotalSales; GudfoodHeadlineText.GetMaxTotalAmount())
+                field(TotalSales; GetMaxTotalAmount())
                 {
                     ApplicationArea = All;
 
@@ -22,6 +23,23 @@ page 50110 GudfoodHeadline
             }
         }
     }
+
+    local procedure GetMaxTotalAmount(): Text[250]
     var
-        GudfoodHeadlineText: Codeunit GudfoodHeadlineText;
+        PostedGudfoodOrders: Record "Posted Gudfood Order Header";
+        MaxAmountLabel: Label 'Maximum total amount of order is: ';
+    begin
+        PostedGudfoodOrders.SetCurrentKey("Total Amount");
+        PostedGudfoodOrders.FindLast();
+        exit(MaxAmountLabel + Format(PostedGudfoodOrders."Total Amount"));
+    end;
+
+    local procedure GetWelcomeText(): Text[250]
+    var
+        WelcomeLabel: Label 'Welcome to Gudfood, ';
+        User: Record User;
+    begin
+        User.Get(UserSecurityID);
+        exit(WelcomeLabel + User."Full Name");
+    end;
 }

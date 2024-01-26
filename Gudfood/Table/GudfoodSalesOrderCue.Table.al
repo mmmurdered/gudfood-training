@@ -1,6 +1,6 @@
-table 50105 GudfoodSalesOrderCue
+table 50105 "Gudfood Sales Order Cue"
 {
-    CaptionML = ENU = 'Gudfood Sales Order Cue';
+    Caption = 'Gudfood Sales Order Cue';
 
     fields
     {
@@ -10,21 +10,21 @@ table 50105 GudfoodSalesOrderCue
         }
         field(2; "Number of Orders"; Integer)
         {
-            CaptionML = ENU = 'Current Number of Orders', UKR = 'Поточна кількість замовлень';
+            Caption = 'Gudfood Orders';
             FieldClass = FlowField;
-            CalcFormula = count(GudfoodOrderHeader);
+            CalcFormula = count("Gudfood Order Header");
         }
         field(3; "Total Number of Orders"; Integer)
         {
-            CaptionML = ENU = 'Total Number of Orders', UKR = 'Загальна кількість замовлень';
+            Caption = 'Posted Gudfood Orders';
             FieldClass = FlowField;
-            CalcFormula = count(PostedGudfoodOrderHeader);
+            CalcFormula = count("Posted Gudfood Order Header");
         }
         field(4; "Number of Gudfood Items"; Integer)
         {
-            CaptionML = ENU = 'Number of Gudfood Items', UKR = 'Кількість товарів Гудфуд';
+            Caption = 'Gudfood Items';
             FieldClass = FlowField;
-            CalcFormula = count(GudfoodItem);
+            CalcFormula = count("Gudfood Item");
         }
     }
 

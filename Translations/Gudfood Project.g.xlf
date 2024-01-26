@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Gudfood Project">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1903646731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Goodfud Item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Method 3152277940 - NamedType 300016621" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot delete, item is on open orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Method OnDelete - NamedType ErrorWhileDeleting</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Picture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 841303581 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity in Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Qty. in Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 3717539183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity Ordered</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Qty. Ordered - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 3345690118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shelf Life</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Shelf Life - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 1878130204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1903646731 - Field 2937233469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Item - Field Unit Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 2972662832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Created</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Date Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 2632124822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Order Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 514695969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Posting No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 1474036805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Sell-to Customer Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 1225278069 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell to Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Sell-to Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 3692706522 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Total Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4217843823 - Field 3835260082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Header - Field Total Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 2972662832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Created</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Date Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 568743302 - Method 2126772001 - NamedType 1701461052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not found specified gudfood item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Item No. - Method OnValidate - NamedType NotFoundMessage</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 568743302 - Method 2126772001 - NamedType 1033312329" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shelf date is expired, please choose another item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Item No. - Method OnValidate - NamedType ShelfDateExpired</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 4093180191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Item Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 2202932243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Order No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 2343173349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell- to Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Sell- to Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4222363240 - Field 2937233469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Unit Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 927445555 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Sales Order Cue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Sales Order Cue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 927445555 - Field 3199481068 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Sales Order Cue - Field Number of Gudfood Items - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 927445555 - Field 34405857 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Sales Order Cue - Field Number of Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 927445555 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Sales Order Cue - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 927445555 - Field 2601757311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Gudfood Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Sales Order Cue - Field Total Number of Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Gudfood Order Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 2972662832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Created</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Date Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 2632124822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Order Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 1474036805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Sell-to Customer Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 1225278069 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell to Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Sell-to Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 3692706522 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Total Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4041849936 - Field 3835260082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Header - Field Total Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Gudfood Order Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 2972662832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date created</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Date Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 4093180191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Item Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 2202932243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Order No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 2343173349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell- to Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Sell- to Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3631824407 - Field 2937233469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Unit Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 434910150 - Method 2751330090 - NamedType 1747765512" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure to post resords?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method PostOrder - NamedType ConfirmationMessage</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 434910150 - Method 2751330090 - NamedType 570608655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The order has been successfully posted, do yo want to open posted report?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method PostOrder - NamedType SuccessfullyPostedOrderMessage</note>
+        </trans-unit>
+        <trans-unit id="Page 4022591774 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Headline</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Headline - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4022591774 - Method 322232144 - NamedType 855969554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum total amount of order is: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Headline - Method GetMaxTotalAmount - NamedType MaxAmountLabel</note>
+        </trans-unit>
+        <trans-unit id="Page 4022591774 - Method 651985211 - NamedType 2882169296" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Welcome to Gudfood, </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Headline - Method GetWelcomeText - NamedType WelcomeLabel</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Item Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified code of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified description of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 3345690118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Shelf Life of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Shelf Life - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified type of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 2937233469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified unit price of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Unit Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 841303581 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity in Order currently</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Qty. in Order - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 872224191 - Control 3717539183 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity Ordered</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Qty. Ordered - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Item List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Сode of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 841303581 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity in Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Qty. in Order - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 3717539183 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity Ordered</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Qty. Ordered - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 3345690118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shelf Life of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Shelf Life - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1986374261 - Control 2937233469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item List - Control Unit Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Item Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Method 2946154981 - NamedType 3921259486" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select item image: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Method ImportFromDevice - NamedType SelectPictureLabel</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Method 2946154981 - NamedType 495309510" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error, empty name of file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Method ImportFromDevice - NamedType EmptyNameError</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Control 2937229991 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture of the item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Control Gudfood Item Picture - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Action 2864777531 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import a picture file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Action ImportPicture - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Action 2864777531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Action ImportPicture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3324844507 - Action 3068649222 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Picture FB - Action RemovePicture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 907109761 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 3431103444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Customer Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 1474036805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Customer name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 1225278069 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Customer sell to of the Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Sell-to Customer No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 2972662832 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Created Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Date Created - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified No of the Order, can be generated automatically</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 2632124822 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Order Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Order Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 514695969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified No of the Posted Order, can be generated automatically</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Posting No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 3692706522 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Amount of Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Total Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Control 3835260082 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specified Quantity of Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Control Total Qty - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Post - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Exporting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Posting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 201881534 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order - Action Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 930372099 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Activities</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order Activities - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 930372099 - Control 201881534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order Activities - Control Gudfood Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Post - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Exporting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Posting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2070028540 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order List - Action Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2651207663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Order Subpage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Gudfood Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Control 4222363240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Sales Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Gudfood Order Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Control 907109761 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Control 3431103444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Control Customer Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Exporting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2760287525 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order - Action Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2067450363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Gudfood Order List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2067450363 - Action 484870080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Exporting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2067450363 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2067450363 - Action 36190024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export to XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2067450363 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order List - Action Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4231331752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Gudfood Order Subpage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Posted Gudfood Order Subpage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2838874104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2838874104 - ReportLayout 3367648989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Report (RDLC)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - ReportLayout RDLCLayout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2838874104 - ReportLayout 3548004808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Order Report (Word)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - ReportLayout WordLayout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3126130887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Posted Order Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Posted Order Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3126130887 - ReportLayout 3367648989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Posted Order Report (RDLC)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Posted Order Report - ReportLayout RDLCLayout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3126130887 - ReportLayout 3548004808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Posted Order Report (Word)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Posted Order Report - ReportLayout WordLayout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1263470650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Order to XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort Gudfood Order Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2522315337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Posted Order to XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort Gudfood Posted Order Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4047767361 - Field 4011426631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Gudfood Item Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gudfood Sales &amp; Rec. Setup - Field Gudfood Item Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4047767361 - Field 624326770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Gudfood Order Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gudfood Sales &amp; Rec. Setup - Field Gudfood Order Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4047767361 - Field 1818215729 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Gudfood Posted Item Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gudfood Sales &amp; Rec. Setup - Field Gudfood Posted Order Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Profile 3446584585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gudfood Profile</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Profile Gudfood Profile - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3343147555 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Gudfood Item Type - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3343147555 - EnumValue 132504127 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Burger</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Gudfood Item Type - EnumValue Burger - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3343147555 - EnumValue 2269872718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cupcake</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Gudfood Item Type - EnumValue Cupcake - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3343147555 - EnumValue 1639982854 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Drink</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Gudfood Item Type - EnumValue Drink - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3343147555 - EnumValue 2944630221 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salad</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Gudfood Item Type - EnumValue Salad - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

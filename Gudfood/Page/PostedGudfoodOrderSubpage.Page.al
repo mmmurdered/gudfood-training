@@ -1,11 +1,10 @@
-page 50105 PostedGudfoodOrderSubpage
+page 50105 "Posted Gudfood Order Subpage"
 {
-    CaptionML = ENU = 'Posted Gudfood Order Subpage', UKR = 'Опублікована Підсторінка Замовлення Гудфуд';
+    Caption = 'Posted Gudfood Order Subpage';
     PageType = ListPart;
     ApplicationArea = All;
     Editable = false;
-    SourceTable = PostedGudfoodOrderline;
-    AutoSplitKey = true;
+    SourceTable = "Posted Gudfood Order Line";
 
     layout
     {
@@ -13,19 +12,7 @@ page 50105 PostedGudfoodOrderSubpage
         {
             repeater(Group)
             {
-                field("Order No."; Rec."Order No.")
-                {
-
-                }
                 field("Line No."; Rec."Line No.")
-                {
-
-                }
-                field("Sell-to Customer No."; Rec."Sell- to Customer No.")
-                {
-
-                }
-                field("Date Created"; Rec."Date Created")
                 {
 
                 }
