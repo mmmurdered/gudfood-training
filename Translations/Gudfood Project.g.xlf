@@ -643,6 +643,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 2838874104 - NamedType 2114887895" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created By: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Order Report - NamedType CreatedByLabel</note>
+        </trans-unit>
         <trans-unit id="Report 2838874104 - ReportLayout 3367648989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Order Report (RDLC)</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -657,6 +662,11 @@
           <source>Gudfood Posted Order Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Posted Order Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3126130887 - NamedType 2114887895" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created By: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Gudfood Posted Order Report - NamedType CreatedByLabel</note>
         </trans-unit>
         <trans-unit id="Report 3126130887 - ReportLayout 3367648989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gudfood Posted Order Report (RDLC)</source>

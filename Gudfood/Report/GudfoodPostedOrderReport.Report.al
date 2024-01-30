@@ -1,8 +1,6 @@
 report 50101 "Gudfood Posted Order Report"
 {
     Caption = 'Gudfood Posted Order Report';
-    UsageCategory = ReportsAndAnalysis;
-    ApplicationArea = All;
     DefaultRenderingLayout = RDLCLayout;
 
     dataset
@@ -26,6 +24,10 @@ report 50101 "Gudfood Posted Order Report"
                 IncludeCaption = true;
             }
             column(USERID; USERID)
+            {
+
+            }
+            column(Created_By_Caption; CreatedByLabel)
             {
 
             }
@@ -90,4 +92,7 @@ report 50101 "Gudfood Posted Order Report"
             exit(RetDate);
         end;
     end;
+
+    var
+        CreatedByLabel: Label 'Created By: ';
 }
