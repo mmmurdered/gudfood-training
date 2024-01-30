@@ -1,8 +1,6 @@
 report 50100 "Gudfood Order Report"
 {
     Caption = 'Gudfood Order Report';
-    UsageCategory = ReportsAndAnalysis;
-    ApplicationArea = All;
     DefaultRenderingLayout = RDLCLayout;
 
     dataset

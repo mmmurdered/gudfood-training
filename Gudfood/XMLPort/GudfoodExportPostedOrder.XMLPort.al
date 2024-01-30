@@ -6,7 +6,7 @@ xmlport 50101 "Gudfood Posted Order Export"
 
     schema
     {
-        textelement(OrderOrderHeader)
+        textelement(PostedOrders)
         {
             tableelement(PostedGudfoodOrderHeader; "Posted Gudfood Order Header")
             {

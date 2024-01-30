@@ -30,8 +30,9 @@ page 50110 "Gudfood Headline"
         MaxAmountLabel: Label 'Maximum total amount of order is: ';
     begin
         PostedGudfoodOrders.SetCurrentKey("Total Amount");
-        PostedGudfoodOrders.FindLast();
-        exit(MaxAmountLabel + Format(PostedGudfoodOrders."Total Amount"));
+        if PostedGudfoodOrders.FindLast() then
+            exit(MaxAmountLabel + Format(PostedGudfoodOrders."Total Amount"));
+        exit(MaxAmountLabel + '0');
     end;
 
     local procedure GetWelcomeText(): Text[250]
