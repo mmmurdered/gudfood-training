@@ -688,7 +688,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>USERID</rd:DefaultName>
-            <Top>0.77653in</Top>
+            <Top>1.08209in</Top>
             <Left>6.97792in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -843,6 +843,36 @@
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Created_By_Caption">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Created_By_Caption.Value, "DataSet_Result")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Created_By_Caption</rd:DefaultName>
+            <Top>0.77653in</Top>
+            <Left>6.97792in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1069,6 +1099,9 @@ End Function
         </Field>
         <Field Name="USERID">
           <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Created_By_Caption">
+          <DataField>Created_By_Caption</DataField>
         </Field>
         <Field Name="Total_Amount">
           <DataField>Total_Amount</DataField>

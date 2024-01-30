@@ -27,6 +27,10 @@ report 50101 "Gudfood Posted Order Report"
             {
 
             }
+            column(Created_By_Caption; CreatedByLabel)
+            {
+
+            }
             column(Total_Amount; "Total Amount")
             {
                 IncludeCaption = true;
@@ -88,4 +92,7 @@ report 50101 "Gudfood Posted Order Report"
             exit(RetDate);
         end;
     end;
+
+    var
+        CreatedByLabel: Label 'Created By: ';
 }
