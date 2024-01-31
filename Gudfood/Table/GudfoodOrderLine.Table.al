@@ -17,7 +17,6 @@ table 50102 "Gudfood Order Line"
         field(10; "Sell- to Customer No."; Code[20])
         {
             Caption = 'Sell- to Customer No.';
-            Editable = false;
             TableRelation = Customer;
         }
         field(20; "Date Created"; Date)

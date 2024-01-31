@@ -173,7 +173,7 @@
         </trans-unit>
         <trans-unit id="Table 4222363240 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target state="translated">Номер рядку</target>
+          <target state="translated">Номер Рядка</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Gudfood Order Line - Field Line No. - Property Caption</note>
         </trans-unit>
@@ -323,7 +323,7 @@
         </trans-unit>
         <trans-unit id="Table 3631824407 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target state="translated">Номер Лінії</target>
+          <target state="translated">Номер Рядка</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Line No. - Property Caption</note>
         </trans-unit>

@@ -42,7 +42,6 @@ table 50100 "Gudfood Item"
         field(50; "Shelf Life"; Date)
         {
             Caption = 'Shelf Life';
-
         }
 
         field(60; Picture; Media)

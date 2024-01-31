@@ -24,7 +24,7 @@ table 50101 "Gudfood Order Header"
                 if Customer.Get("Sell-to Customer No.") then
                     "Sell-to Customer Name" := Customer.Name
                 else
-                    "Sell-to Customer Name" := '';
+                    Clear("Sell-to Customer Name");
             end;
         }
         field(11; "Sell-to Customer Name"; Text[100])
