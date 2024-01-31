@@ -21,19 +21,19 @@ codeunit 50100 "Gudfood Order Post"
             PostingNo := GudfoodOrder."Posting No.";
 
             PostedGudfoodOrderHeader.Init();
-            PostedGudfoodOrderHeader.TransferFields(GudfoodOrder, true);
+            PostedGudfoodOrderHeader.TransferFields(GudfoodOrder);
             PostedGudfoodOrderHeader."No." := GudfoodOrder."Posting No.";
             PostedGudfoodOrderHeader."Posting Date" := Today;
-            PostedGudfoodOrderHeader.Insert(true);
+            PostedGudfoodOrderHeader.Insert();
 
             GudfoodOrderLine.SetRange("Order No.", GudfoodOrder."No.");
             if GudfoodOrderLine.FindSet() then
                 repeat
                     PostedGudfoodOrderLine.Init();
-                    PostedGudfoodOrderLine.TransferFields(GudfoodOrderLine, true);
+                    PostedGudfoodOrderLine.TransferFields(GudfoodOrderLine);
                     PostedGudfoodOrderLine."Order No." := GudfoodOrder."Posting No.";
                     PostedGudfoodOrderLine."Date Created" := Today;
-                    PostedGudfoodOrderLine.Insert(true);
+                    PostedGudfoodOrderLine.Insert();
                 until GudfoodOrderLine.Next() = 0;
 
 

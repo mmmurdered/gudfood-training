@@ -20,7 +20,6 @@ page 50101 "Gudfood Item Card"
                     ToolTip = 'Specified description of the item';
                     ShowMandatory = true;
                     NotBlank = true;
-
                 }
                 field(Type; Rec.Type)
                 {
