@@ -18,6 +18,7 @@ table 50100 "Gudfood Item"
         field(20; "Unit Price"; Decimal)
         {
             Caption = 'Unit Price';
+            MinValue = 0;
         }
 
         field(30; Type; Enum "Gudfood Item Type")

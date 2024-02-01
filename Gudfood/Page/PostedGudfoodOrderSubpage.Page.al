@@ -3,8 +3,8 @@ page 50105 "Posted Gudfood Order Subpage"
     Caption = 'Posted Gudfood Order Subpage';
     PageType = ListPart;
     ApplicationArea = All;
-    Editable = false;
     SourceTable = "Posted Gudfood Order Line";
+    Editable = false;
 
     layout
     {
