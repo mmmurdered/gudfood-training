@@ -15,13 +15,12 @@ page 50104 "Gudfood Order"
                 field("No."; Rec."No.")
                 {
                     ToolTip = 'Specified No of the Order, can be generated automatically';
-
+                    ShowMandatory = true;
                     trigger OnAssistEdit()
                     begin
                         if Rec.AssistEdit(xRec) then
                             CurrPage.Update();
                     end;
-
                 }
                 group("Customer Information")
                 {
