@@ -360,9 +360,14 @@
         <trans-unit id="Codeunit 434910150 - Method 1825047850 - NamedType 1433447431" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line %1 has an error</source>
           <target state="translated">Рядок %1 має помилку</target>
-          <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method CheckEmptyLines - NamedType OrderLineEmptyError</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 434910150 - Method 923652665 - NamedType 1783472521" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Header has no required information</source>
+          <target state="translated">Заголовок замовлення не має достатньої Інформації</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method CheckOrderHeader - NamedType OrderHeaderEmptyMessage</note>
         </trans-unit>
         <trans-unit id="Codeunit 434910150 - Method 2751330090 - NamedType 1747765512" size-unit="char" translate="yes" xml:space="preserve">
           <source>Are you sure to post resords?</source>

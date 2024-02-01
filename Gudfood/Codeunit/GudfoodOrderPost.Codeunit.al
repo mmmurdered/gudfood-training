@@ -17,6 +17,7 @@ codeunit 50100 "Gudfood Order Post"
         PostingNo: Code[20];
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
+            CheckOrderHeader(GudfoodOrder);
             CheckEmptyLines(GudfoodOrderLine, GudfoodOrder);
             OnBeforePostGudfoodOrder(GudfoodOrder);
 
@@ -60,6 +61,14 @@ codeunit 50100 "Gudfood Order Post"
         end
         else
             Error(NoOrderLinesError);
+    end;
+
+    local procedure CheckOrderHeader(GudfoodOrder: Record "Gudfood Order Header")
+    var
+        OrderHeaderEmptyMessage: Label 'Order Header has no required information';
+    begin
+        if (GudfoodOrder."Order Date" = 0D) or (GudfoodOrder."Sell-to Customer No." = '') then
+            Error(OrderHeaderEmptyMessage);
     end;
 
     [IntegrationEvent(true, false)]
