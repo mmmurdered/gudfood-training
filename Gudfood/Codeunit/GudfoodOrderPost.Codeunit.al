@@ -17,14 +17,8 @@ codeunit 50100 "Gudfood Order Post"
         PostingNo: Code[20];
     begin
         if Dialog.Confirm(ConfirmationMessage) then begin
+            CheckEmptyLines(GudfoodOrderLine, GudfoodOrder);
             OnBeforePostGudfoodOrder(GudfoodOrder);
-            PostingNo := GudfoodOrder."Posting No.";
-
-            PostedGudfoodOrderHeader.Init();
-            PostedGudfoodOrderHeader.TransferFields(GudfoodOrder);
-            PostedGudfoodOrderHeader."No." := GudfoodOrder."Posting No.";
-            PostedGudfoodOrderHeader."Posting Date" := Today;
-            PostedGudfoodOrderHeader.Insert();
 
             GudfoodOrderLine.SetRange("Order No.", GudfoodOrder."No.");
             if GudfoodOrderLine.FindSet() then
@@ -36,6 +30,12 @@ codeunit 50100 "Gudfood Order Post"
                     PostedGudfoodOrderLine.Insert();
                 until GudfoodOrderLine.Next() = 0;
 
+            PostingNo := GudfoodOrder."Posting No.";
+            PostedGudfoodOrderHeader.Init();
+            PostedGudfoodOrderHeader.TransferFields(GudfoodOrder);
+            PostedGudfoodOrderHeader."No." := GudfoodOrder."Posting No.";
+            PostedGudfoodOrderHeader."Posting Date" := Today;
+            PostedGudfoodOrderHeader.Insert();
 
             GudfoodOrder.Delete(true);
 
@@ -44,6 +44,22 @@ codeunit 50100 "Gudfood Order Post"
                 Page.Run(Page::"Posted Gudfood Order", PostedGudfoodOrderHeader);
             end;
         end;
+    end;
+
+    local procedure CheckEmptyLines(OrderLine: Record "Gudfood Order Line"; GudfoodOrder: Record "Gudfood Order Header")
+    var
+        NoOrderLinesError: Label 'There are no lines to post';
+        OrderLineEmptyError: Label 'Line %1 has an error';
+    begin
+        OrderLine.SetRange("Order No.", GudfoodOrder."No.");
+        if OrderLine.FindSet() then begin
+            repeat
+                if OrderLine.Amount = 0 then
+                    Error(StrSubstNo(OrderLineEmptyError, OrderLine."Line No."));
+            until OrderLine.Next() = 0;
+        end
+        else
+            Error(NoOrderLinesError);
     end;
 
     [IntegrationEvent(true, false)]

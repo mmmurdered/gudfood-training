@@ -293,6 +293,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Posted Gudfood Order Line - Field Unit Price - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 434910150 - Method 1825047850 - NamedType 1761894374" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no lines to post</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method CheckEmptyLines - NamedType NoOrderLinesError</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 434910150 - Method 1825047850 - NamedType 1433447431" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line %1 has an error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Gudfood Order Post - Method CheckEmptyLines - NamedType OrderLineEmptyError</note>
+        </trans-unit>
         <trans-unit id="Codeunit 434910150 - Method 2751330090 - NamedType 1747765512" size-unit="char" translate="yes" xml:space="preserve">
           <source>Are you sure to post resords?</source>
           <note from="Developer" annotates="general" priority="2"></note>

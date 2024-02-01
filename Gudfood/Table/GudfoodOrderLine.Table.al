@@ -74,7 +74,7 @@ table 50102 "Gudfood Order Line"
         field(60; "Unit Price"; Decimal)
         {
             Caption = 'Unit Price';
-
+            MinValue = 0;
             trigger OnValidate()
             begin
                 UpdateAmount();
