@@ -1,7 +1,7 @@
 table 50102 "Gudfood Order Line"
 {
     Caption = 'Gudfood Order Line';
-
+    //LookupPageId
     fields
     {
         field(1; "Order No."; Code[20])
@@ -105,7 +105,7 @@ table 50102 "Gudfood Order Line"
 
     local procedure UpdateAmount()
     begin
-        Rec.Amount := Rec.Quantity * Rec."Unit Price";
+        Rec.Amount := Round(Rec.Quantity * Rec."Unit Price", 2);
     end;
 
     var

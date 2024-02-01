@@ -86,9 +86,11 @@ page 50107 "Gudfood Order List"
                 Caption = 'Export to XML';
                 Image = XMLFile;
                 trigger OnAction()
+                var
+                    GudfoodOrder: Record "Gudfood Order Header";
                 begin
-                    CurrPage.SetSelectionFilter(Rec);
-                    Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, Rec);
+                    CurrPage.SetSelectionFilter(GudfoodOrder);
+                    Xmlport.Run(Xmlport::"Gudfood Order Export", false, false, GudfoodOrder);
                 end;
             }
 

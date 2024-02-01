@@ -38,6 +38,7 @@ page 50101 "Gudfood Item Card"
             }
             group("Ordered Details")
             {
+                Caption = 'Ordered Details';
                 field("Qty. Ordered"; Rec."Qty. Ordered")
                 {
                     ToolTip = 'Quantity Ordered';

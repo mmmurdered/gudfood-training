@@ -435,6 +435,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Unit Price - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 872224191 - Control 1636147863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ordered Details</source>
+          <target state="translated">Статистика Замовлень</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gudfood Item Card - Control Ordered Details - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 872224191 - Control 841303581 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity in Order currently</source>
           <target state="translated">Кількість в Замовленнях</target>
